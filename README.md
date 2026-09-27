@@ -19,3 +19,23 @@ The `approach/record-and-query` branch is the first modelling approach. Other ap
 ## Use and reproduce
 
 There is nothing to run or load in Protégé yet. When the first prototype is available, this README will give the exact steps to generate the ontology, open it in Protégé, run the example SPARQL queries, and repeat the validation checks. Required software versions and source references will be listed alongside those steps.
+
+## Source texts
+
+The source PDFs are kept in the gitignored `data/` directory. Download them after cloning:
+
+```bash
+mkdir -p data
+curl -fL -o data/eu-ai-act-consolidated-2026-07-27-en.pdf 'https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02024R1689-20260727'
+curl -fL -o data/eu-ai-act-original-2024-en.pdf 'https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32024R1689'
+sha256sum data/*.pdf
+```
+
+The files downloaded on 27 September 2026 had these SHA-256 hashes:
+
+```text
+1ccd38d1c78482cf2053b70110115adcc5080700acc8bd7bead8cb3579143ccf  data/eu-ai-act-consolidated-2026-07-27-en.pdf
+bba630444b3278e881066774002a1d7824308934f49ccfa203e65be43692f55e  data/eu-ai-act-original-2024-en.pdf
+```
+
+The consolidated text is a dated working reference (CELEX 02024R1689-20260727). EUR-Lex states that consolidated texts are documentation aids; the original Official Journal publication (CELEX 32024R1689) is the authentic base act. Keep both identifiers with extracted claims so their source can be checked.
