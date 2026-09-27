@@ -39,3 +39,13 @@ bba630444b3278e881066774002a1d7824308934f49ccfa203e65be43692f55e  data/eu-ai-act
 ```
 
 The consolidated text is a dated working reference (CELEX 02024R1689-20260727). EUR-Lex states that consolidated texts are documentation aids; the original Official Journal publication (CELEX 32024R1689) is the authentic base act. Keep both identifiers with extracted claims so their source can be checked.
+
+## View the draft design diagram
+
+The current entity-and-relation sketch is in `fig/conceptual-model.tex`. With a TeX installation that includes TikZ, render it from the repository root:
+
+```bash
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory fig fig/conceptual-model.tex
+```
+
+Open `fig/conceptual-model.pdf` to review the figure. The PDF is a local build artifact and is not tracked by Git. The diagram is provisional; it describes the proposed query structure, not a completed ontology.
