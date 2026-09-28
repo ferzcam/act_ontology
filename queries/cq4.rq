@@ -1,0 +1,13 @@
+PREFIX act: <https://github.com/ferzcam/act_ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dct: <http://purl.org/dc/terms/>
+SELECT ?statementLabel ?sourceRef ?condition ?exception WHERE {
+  ?statement rdf:type ?type ; rdfs:label ?statementLabel ; prov:wasDerivedFrom ?provision .
+  VALUES ?type { act:Obligation act:Prohibition act:ClassificationRule }
+  ?provision dct:identifier ?sourceRef .
+  OPTIONAL { ?statement act:hasCondition ?condition }
+  OPTIONAL { ?statement act:hasException ?exception }
+  FILTER(BOUND(?condition) || BOUND(?exception))
+} ORDER BY ?sourceRef

@@ -1,0 +1,10 @@
+PREFIX act: <https://github.com/ferzcam/act_ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dct: <http://purl.org/dc/terms/>
+SELECT ?practiceLabel ?statementLabel ?sourceRef WHERE {
+  ?practice rdfs:subClassOf act:ProhibitedPractice ; rdfs:label ?practiceLabel .
+  ?statement rdf:type act:Prohibition ; act:concernsPractice ?practice ; rdfs:label ?statementLabel ; prov:wasDerivedFrom ?provision .
+  ?provision dct:identifier ?sourceRef .
+} ORDER BY ?sourceRef

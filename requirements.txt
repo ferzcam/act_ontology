@@ -1,0 +1,6 @@
+isodate==0.7.2
+JPype1==1.5.1
+mowl-borg==2.0.0
+packaging==26.3
+pyparsing==3.3.3
+rdflib==7.2.1

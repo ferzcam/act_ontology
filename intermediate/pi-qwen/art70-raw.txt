@@ -1,0 +1,28 @@
+
+
+[
+  {
+    "source_paragraph": 1,
+    "authority_role": "National competent authorities (notifying and market surveillance)",
+    "responsibility": "Exercise powers independently and impartially; ensure application and implementation of the Regulation",
+    "evidence": "exercise their powers independently, impartially and without bias"
+  },
+  {
+    "source_paragraph": 2,
+    "authority_role": "Market surveillance authority (as single point of contact)",
+    "responsibility": "Act as the single point of contact for the Regulation",
+    "evidence": "designate a market surveillance authority to act as the single point of contact"
+  },
+  {
+    "source_paragraph": 3,
+    "authority_role": "National competent authorities",
+    "responsibility": "Staffed with personnel having expertise in AI, data, cybersecurity, fundamental rights, and legal requirements",
+    "evidence": "in-depth understanding of AI technologies, data and data computing"
+  },
+  {
+    "source_paragraph": 9,
+    "authority_role": "European Data Protection Supervisor",
+    "responsibility": "Act as competent authority for supervision of in-scope Union institutions, bodies, offices or agencies",
+    "evidence": "shall act as the competent authority for their supervision"
+  }
+]

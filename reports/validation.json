@@ -1,0 +1,424 @@
+{
+  "source_celex": "02024R1689-20260727",
+  "source_sha256": "1ccd38d1c78482cf2053b70110115adcc5080700acc8bd7bead8cb3579143ccf",
+  "owl2_el_profile": true,
+  "profile_violations": [],
+  "consistent": true,
+  "unsatisfiable_named_classes": [],
+  "triple_count": 820,
+  "class_count": 41,
+  "statement_count": 42,
+  "cited_provision_count": 41,
+  "annotation_completeness": true,
+  "evidence_matches": 42,
+  "evidence_match_rate": 1.0,
+  "missing_evidence": [],
+  "queries": {
+    "cq1": {
+      "rows": [
+        [
+          "Manipulative or deceptive technique",
+          "Subliminal, manipulative or deceptive techniques materially distorting behaviour causing significant harm",
+          "Article 5(1)(a)"
+        ],
+        [
+          "Exploitation of vulnerabilities",
+          "Exploiting vulnerabilities of a person or group due to age, disability or social/economic situation",
+          "Article 5(1)(b)"
+        ],
+        [
+          "Non-consensual intimate or sexual content",
+          "Generation or manipulation of intimate or sexually explicit material of an identifiable person",
+          "Article 5(1)(ba)"
+        ],
+        [
+          "Child sexual abuse material or performance",
+          "Generation or manipulation of material within the meaning of Article 2(c) and (e) of Directive 2011/93/EU",
+          "Article 5(1)(bb)"
+        ],
+        [
+          "Social scoring",
+          "Social scoring (evaluation/classification of persons or groups over time) leading to detrimental or unfavourable treatment",
+          "Article 5(1)(c)"
+        ],
+        [
+          "Crime risk assessment based solely on profiling",
+          "Predictive risk assessment of a person committing a criminal offence based solely on profiling or personality traits",
+          "Article 5(1)(d)"
+        ],
+        [
+          "Untargeted facial-image scraping",
+          "Untargeted facial-image scraping",
+          "Article 5(1)(e)"
+        ],
+        [
+          "Workplace or education emotion inference",
+          "Workplace or education emotion inference",
+          "Article 5(1)(f)"
+        ],
+        [
+          "Sensitive biometric categorisation",
+          "Sensitive biometric categorisation",
+          "Article 5(1)(g)"
+        ],
+        [
+          "Real-time remote biometric identification for law enforcement",
+          "Real-time remote biometric identification for law enforcement",
+          "Article 5(1)(h)"
+        ]
+      ],
+      "row_count": 10,
+      "missing_required_references": [],
+      "passed": true
+    },
+    "cq2": {
+      "rows": [
+        [
+          "Annex III: Biometrics",
+          "Annex III(1)",
+          "Annex III listed route to high-risk classification"
+        ],
+        [
+          "Annex III: Critical infrastructure",
+          "Annex III(2)",
+          "Annex III listed route to high-risk classification"
+        ],
+        [
+          "Annex III: Education and vocational training",
+          "Annex III(3)",
+          "Annex III listed route to high-risk classification"
+        ],
+        [
+          "Annex III: Employment and workers management",
+          "Annex III(4)",
+          "Annex III listed route to high-risk classification"
+        ],
+        [
+          "Annex III: Essential private and public services",
+          "Annex III(5)",
+          "Annex III listed route to high-risk classification"
+        ],
+        [
+          "Annex III: Law enforcement",
+          "Annex III(6)",
+          "Annex III listed route to high-risk classification"
+        ],
+        [
+          "Annex III: Migration, asylum and border control",
+          "Annex III(7)",
+          "Annex III listed route to high-risk classification"
+        ],
+        [
+          "Annex III: Administration of justice and democratic processes",
+          "Annex III(8)",
+          "Annex III listed route to high-risk classification"
+        ]
+      ],
+      "row_count": 8,
+      "missing_required_references": [],
+      "passed": true
+    },
+    "cq3": {
+      "rows": [
+        [
+          "Deployer",
+          "Take technical and organisational measures to use the system in accordance with its instructions for use.",
+          "Article 26(1)"
+        ],
+        [
+          "Deployer",
+          "Inform natural persons that they are subject to the use of the high-risk AI system.",
+          "Article 26(11)"
+        ],
+        [
+          "Deployer",
+          "Assign human oversight to natural persons with the necessary competence, training, authority, and support.",
+          "Article 26(2)"
+        ],
+        [
+          "Deployer",
+          "Ensure input data is relevant and sufficiently representative for the intended purpose of the system.",
+          "Article 26(4)"
+        ],
+        [
+          "Deployer",
+          "Monitor the operation of the system based on its instructions for use and inform providers where relevant.",
+          "Article 26(5)"
+        ],
+        [
+          "Deployer",
+          "Keep automatically generated logs for at least six months, to the extent they are under the deployer's control.",
+          "Article 26(6)"
+        ],
+        [
+          "Deployer",
+          "Inform workers' representatives and affected workers before putting into service or using a high-risk AI system at the workplace.",
+          "Article 26(7)"
+        ],
+        [
+          "Provider",
+          "Ensure high-risk AI systems are compliant with the requirements set out in Section 2",
+          "Article 16(a)"
+        ],
+        [
+          "Provider",
+          "Indicate provider name, trade name/trademark, and contact address on the system or packaging/documentation",
+          "Article 16(b)"
+        ],
+        [
+          "Provider",
+          "Have a quality management system in place which complies with Article 17",
+          "Article 16(c)"
+        ],
+        [
+          "Provider",
+          "Keep the documentation referred to in Article 18",
+          "Article 16(d)"
+        ],
+        [
+          "Provider",
+          "Keep the logs automatically generated by the high-risk AI system as referred to in Article 19",
+          "Article 16(e)"
+        ],
+        [
+          "Provider",
+          "Ensure the system undergoes the relevant conformity assessment procedure per Article 43 before placement on market",
+          "Article 16(f)"
+        ],
+        [
+          "Provider",
+          "Draw up an EU declaration of conformity in accordance with Article 47",
+          "Article 16(g)"
+        ],
+        [
+          "Provider",
+          "Affix the CE marking to indicate conformity with this Regulation in accordance with Article 48",
+          "Article 16(h)"
+        ],
+        [
+          "Provider",
+          "Comply with the registration obligations referred to in Article 49(1)",
+          "Article 16(i)"
+        ],
+        [
+          "Provider",
+          "Take necessary corrective actions and provide information as required in Article 20",
+          "Article 16(j)"
+        ],
+        [
+          "Provider",
+          "Demonstrate conformity of the system with Section 2 requirements upon reasoned request of a national competent authority",
+          "Article 16(k)"
+        ],
+        [
+          "Provider",
+          "Ensure the system complies with accessibility requirements per Directives (EU) 2016/2102 and (EU) 2019/882",
+          "Article 16(l)"
+        ]
+      ],
+      "row_count": 19,
+      "missing_required_references": [],
+      "passed": true
+    },
+    "cq4": {
+      "rows": [
+        [
+          "Indicate provider name, trade name/trademark, and contact address on the system or packaging/documentation",
+          "Article 16(b)",
+          "Where indication on the system is not possible, on its packaging or accompanying documentation",
+          ""
+        ],
+        [
+          "Keep the logs automatically generated by the high-risk AI system as referred to in Article 19",
+          "Article 16(e)",
+          "when under their control",
+          ""
+        ],
+        [
+          "Ensure the system undergoes the relevant conformity assessment procedure per Article 43 before placement on market",
+          "Article 16(f)",
+          "prior to its being placed on the market or put into service",
+          ""
+        ],
+        [
+          "Affix the CE marking to indicate conformity with this Regulation in accordance with Article 48",
+          "Article 16(h)",
+          "Where affixing on the system is not possible, on its packaging or accompanying documentation",
+          ""
+        ],
+        [
+          "Demonstrate conformity of the system with Section 2 requirements upon reasoned request of a national competent authority",
+          "Article 16(k)",
+          "upon a reasoned request of a national competent authority",
+          ""
+        ],
+        [
+          "Take technical and organisational measures to use the system in accordance with its instructions for use.",
+          "Article 26(1)",
+          "pursuant to paragraphs 3 and 6",
+          ""
+        ],
+        [
+          "Inform natural persons that they are subject to the use of the high-risk AI system.",
+          "Article 26(11)",
+          "deployers of high-risk AI systems referred to in Annex III that make decisions or assist in making decisions related to natural persons",
+          ""
+        ],
+        [
+          "Ensure input data is relevant and sufficiently representative for the intended purpose of the system.",
+          "Article 26(4)",
+          "to the extent the deployer exercises control over the input data",
+          ""
+        ],
+        [
+          "Monitor the operation of the system based on its instructions for use and inform providers where relevant.",
+          "Article 26(5)",
+          "",
+          "shall not cover sensitive operational data of deployers of AI systems which are law enforcement authorities"
+        ],
+        [
+          "Keep automatically generated logs for at least six months, to the extent they are under the deployer's control.",
+          "Article 26(6)",
+          "to the extent such logs are under their control",
+          "unless provided otherwise in applicable Union or national law, in particular in Union law on the protection of personal data"
+        ],
+        [
+          "Inform workers' representatives and affected workers before putting into service or using a high-risk AI system at the workplace.",
+          "Article 26(7)",
+          "Before putting into service or using a high-risk AI system at the workplace",
+          ""
+        ],
+        [
+          "Subliminal, manipulative or deceptive techniques materially distorting behaviour causing significant harm",
+          "Article 5(1)(a)",
+          "Materially distorts behaviour and causes or is reasonably likely to cause significant harm.",
+          ""
+        ],
+        [
+          "Exploiting vulnerabilities of a person or group due to age, disability or social/economic situation",
+          "Article 5(1)(b)",
+          "Materially distorts behaviour and causes or is reasonably likely to cause significant harm.",
+          ""
+        ],
+        [
+          "Generation or manipulation of intimate or sexually explicit material of an identifiable person",
+          "Article 5(1)(ba)",
+          "Applies where done without that person's freely-given, specific, informed, unambiguous and explicit consent for that generation or manipulation. Article 5(1a) limits placement, service and use; Article 5(1b) limits manipulation.",
+          ""
+        ],
+        [
+          "Generation or manipulation of material within the meaning of Article 2(c) and (e) of Directive 2011/93/EU",
+          "Article 5(1)(bb)",
+          "",
+          "Except where a 'without right' defence applies under national law. Article 5(1a) further limits placement, service and use."
+        ],
+        [
+          "Social scoring (evaluation/classification of persons or groups over time) leading to detrimental or unfavourable treatment",
+          "Article 5(1)(c)",
+          "Applies where the social score leads to detrimental or unfavourable treatment in contexts unrelated to where the data was collected, or that is unjustified or disproportionate to the behaviour or its gravity.",
+          ""
+        ],
+        [
+          "Predictive risk assessment of a person committing a criminal offence based solely on profiling or personality traits",
+          "Article 5(1)(d)",
+          "",
+          "Shall not apply to AI systems used to support the human assessment of a person's involvement in criminal activity already based on objective and verifiable facts directly linked to a criminal activity."
+        ],
+        [
+          "Workplace or education emotion inference",
+          "Article 5(1)(f)",
+          "",
+          "Medical or safety reasons."
+        ],
+        [
+          "Sensitive biometric categorisation",
+          "Article 5(1)(g)",
+          "",
+          "Lawfully acquired biometric dataset labelling/filtering and law-enforcement biometric categorisation are excluded."
+        ],
+        [
+          "Real-time remote biometric identification for law enforcement",
+          "Article 5(1)(h)",
+          "For law-enforcement purposes.",
+          "Strict necessity for one of the Article 5(1)(h)(i)–(iii) objectives, plus Article 5(2)–(7) safeguards and authorisation."
+        ],
+        [
+          "Inform natural persons they are interacting with an AI system, unless obvious to a reasonably well-informed, observant and circumspect person in the circumstances and context of use.",
+          "Article 50(1)",
+          "unless this is obvious from the point of view of a natural person who is reasonably well-informed, observant and circumspect, taking into account the circumstances and the context of use",
+          "Shall not apply to AI systems authorised by law to detect, prevent, investigate or prosecute criminal offences, subject to appropriate safeguards for the rights and freedoms of third parties, unless those systems are available for the public to report a criminal offence."
+        ],
+        [
+          "Mark outputs in machine-readable format and detectable as artificially generated or manipulated; technical solutions must be effective, interoperable, robust and reliable as far as technically feasible given content type, cost, and state of the art.",
+          "Article 50(2)",
+          "effective, interoperable, robust and reliable as far as this is technically feasible, taking into account the specificities and limitations of various types of content, the costs of implementation and the generally acknowledged state of the art",
+          "Shall not apply to the extent the AI systems perform an assistive function for standard editing or do not substantially alter the input data provided by the deployer or the semantics thereof, or where authorised by law to detect, prevent, investigate or prosecute criminal offences."
+        ],
+        [
+          "Inform natural persons exposed to the operation of the system and process personal data in accordance with applicable EU data protection law.",
+          "Article 50(3)",
+          "shall process the personal data in accordance with Regulations (EU) 2016/679 and (EU) 2018/1725 and Directive (EU) 2016/680, as applicable",
+          "Shall not apply to AI systems used for biometric categorisation and emotion recognition, which are permitted by law to detect, prevent or investigate criminal offences, subject to appropriate safeguards for the rights and freedoms of third parties, and in accordance with Union law."
+        ],
+        [
+          "Disclose that the content has been artificially generated or manipulated. For artistic, creative, satirical, fictional or analogous works, limited to disclosure of existence in an appropriate manner not hampering display or enjoyment.",
+          "Article 50(4)",
+          "",
+          "Shall not apply where the use is authorised by law to detect, prevent, investigate or prosecute criminal offence. For evidently artistic, creative, satirical, fictional or analogous work or programme, limited to disclosure of the existence of such generated or manipulated content in an appropriate manner that does not hamper the display or enjoyment of the work."
+        ],
+        [
+          "Disclose that the text has been artificially generated or manipulated.",
+          "Article 50(4)",
+          "published with the purpose of informing the public on matters of public interest",
+          "Shall not apply where the use is authorised by law to detect, prevent, investigate or prosecute criminal offences or where the AI-generated content has undergone a process of human review or editorial control and where a natural or legal person holds editorial responsibility for the publication of the content."
+        ],
+        [
+          "Draw up and keep up-to-date technical documentation containing, at minimum, the Annex XI information, to provide upon request to the AI Office and national competent authorities.",
+          "Article 53(1)(a)",
+          "shall contain, at a minimum, the information set out in Annex XI; for the purpose of providing it, upon request, to the AI Office and the national competent authorities",
+          "Not applicable to models released under a free and open-source licence with publicly available parameters, weights, architecture and usage information; does not apply to models with systemic risks (Article 53(2))"
+        ],
+        [
+          "Draw up, keep up-to-date and make available information and documentation enabling downstream providers to understand capabilities and limitations and to comply, containing at minimum the Annex XII elements.",
+          "Article 53(1)(b)",
+          "without prejudice to intellectual property rights and confidential business information or trade secrets in accordance with Union and national law; shall enable good understanding of capabilities and limitations and compliance, and contain, at a minimum, the elements set out in Annex XII",
+          "Not applicable to models released under a free and open-source licence with publicly available parameters, weights, architecture and usage information; does not apply to models with systemic risks (Article 53(2))"
+        ],
+        [
+          "Put in place a policy to comply with Union copyright law, in particular to identify and comply with reservations of rights under Article 4(3) of Directive (EU) 2019/790.",
+          "Article 53(1)(c)",
+          "in particular to identify and comply with, including through state-of-the-art technologies, a reservation of rights expressed pursuant to Article 4(3) of Directive (EU) 2019/790",
+          ""
+        ],
+        [
+          "Draw up and make publicly available a sufficiently detailed summary of the content used to train the model, following an AI Office template.",
+          "Article 53(1)(d)",
+          "according to a template provided by the AI Office",
+          ""
+        ],
+        [
+          "Annex I product route to high-risk classification",
+          "Article 6(1)",
+          "Both safety-component/product coverage by Annex I legislation and required third-party conformity assessment.",
+          "Subject to Article 6(1a) and 6(1c) exclusions."
+        ],
+        [
+          "Annex III listed route to high-risk classification",
+          "Article 6(2)",
+          "The system is in an Annex III listed use case.",
+          "Article 6(3) derogation may apply; profiling of natural persons remains high-risk."
+        ],
+        [
+          "Annex III derogation from high-risk classification",
+          "Article 6(3)",
+          "No significant risk of harm and at least one listed Article 6(3)(a)–(d) circumstance.",
+          "An Annex III system that performs profiling of natural persons is always high-risk."
+        ]
+      ],
+      "row_count": 32,
+      "missing_required_references": [],
+      "passed": true
+    }
+  },
+  "passed": true
+}

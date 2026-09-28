@@ -1,0 +1,6 @@
+{
+  "cq1": {"minimum_rows": 10, "required_references": ["Article 5(1)(a)", "Article 5(1)(h)"]},
+  "cq2": {"minimum_rows": 8, "required_references": ["Annex III(1)", "Annex III(8)"]},
+  "cq3": {"minimum_rows": 18, "required_references": ["Article 16(a)", "Article 26(1)"]},
+  "cq4": {"minimum_rows": 10, "required_references": ["Article 6(3)", "Article 50(1)"]}
+}

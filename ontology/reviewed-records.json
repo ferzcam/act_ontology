@@ -1,0 +1,986 @@
+{
+  "ontology_iri": "https://github.com/ferzcam/act_ontology",
+  "source": {
+    "eli_iri": "http://data.europa.eu/eli/reg/2024/1689/2026-07-27",
+    "label": "EU AI Act consolidated 27 July 2026",
+    "description": "Dated consolidated text of Regulation (EU) 2024/1689; documentation aid rather than authentic Official Journal publication.",
+    "celex": "02024R1689-20260727"
+  },
+  "classes": [
+    {
+      "id": "ActorRole",
+      "parent": null,
+      "label": "Actor role",
+      "description": "Role named by the Act.",
+      "source_ref": null
+    },
+    {
+      "id": "MemberState",
+      "parent": "ActorRole",
+      "label": "Member State",
+      "description": "Member State as the actor responsible for designating authorities.",
+      "source_ref": "Article 70(1)"
+    },
+    {
+      "id": "Provider",
+      "parent": "ActorRole",
+      "label": "Provider",
+      "description": "Provider role as named in the Act.",
+      "source_ref": "Article 3(3)"
+    },
+    {
+      "id": "Deployer",
+      "parent": "ActorRole",
+      "label": "Deployer",
+      "description": "Deployer role as named in the Act.",
+      "source_ref": "Article 3(4)"
+    },
+    {
+      "id": "NationalCompetentAuthority",
+      "parent": "ActorRole",
+      "label": "National competent authority",
+      "description": "National competent authority role as named in the Act.",
+      "source_ref": "Article 70(1)"
+    },
+    {
+      "id": "MarketSurveillanceAuthority",
+      "parent": "ActorRole",
+      "label": "Market surveillance authority",
+      "description": "Market surveillance authority role as named in the Act.",
+      "source_ref": "Article 70(1)"
+    },
+    {
+      "id": "AISystem",
+      "parent": null,
+      "label": "AI system",
+      "description": "Machine-based system as defined by Article 3(1).",
+      "source_ref": "Article 3(1)"
+    },
+    {
+      "id": "HighRiskAISystem",
+      "parent": "AISystem",
+      "label": "High-risk AI system",
+      "description": "A system meeting an Article 6 classification route, subject to applicable conditions and exceptions.",
+      "source_ref": "Article 6"
+    },
+    {
+      "id": "AnnexIProductAISystem",
+      "parent": "AISystem",
+      "label": "Annex I product-related AI system",
+      "description": "AI system in the Annex I product-related route; further Article 6(1) conditions determine high-risk status.",
+      "source_ref": "Article 6(1)"
+    },
+    {
+      "id": "AnnexIIIListedAISystem",
+      "parent": "AISystem",
+      "label": "Annex III listed AI system",
+      "description": "AI system in an Annex III listed use case; Article 6(3) may exclude high-risk status.",
+      "source_ref": "Article 6(2)"
+    },
+    {
+      "id": "BiometricsListedAISystem",
+      "parent": "AnnexIIIListedAISystem",
+      "label": "Annex III: Biometrics",
+      "description": "AI systems in the specified Annex III use cases for biometrics; this does not classify every system in the sector as high-risk.",
+      "source_ref": "Annex III(1)"
+    },
+    {
+      "id": "CriticalInfrastructureListedAISystem",
+      "parent": "AnnexIIIListedAISystem",
+      "label": "Annex III: Critical infrastructure",
+      "description": "AI systems in the specified Annex III use cases for critical infrastructure; this does not classify every system in the sector as high-risk.",
+      "source_ref": "Annex III(2)"
+    },
+    {
+      "id": "EducationListedAISystem",
+      "parent": "AnnexIIIListedAISystem",
+      "label": "Annex III: Education and vocational training",
+      "description": "AI systems in the specified Annex III use cases for education and vocational training; this does not classify every system in the sector as high-risk.",
+      "source_ref": "Annex III(3)"
+    },
+    {
+      "id": "EmploymentListedAISystem",
+      "parent": "AnnexIIIListedAISystem",
+      "label": "Annex III: Employment and workers management",
+      "description": "AI systems in the specified Annex III use cases for employment and workers management; this does not classify every system in the sector as high-risk.",
+      "source_ref": "Annex III(4)"
+    },
+    {
+      "id": "EssentialServicesListedAISystem",
+      "parent": "AnnexIIIListedAISystem",
+      "label": "Annex III: Essential private and public services",
+      "description": "AI systems in the specified Annex III use cases for essential private and public services; this does not classify every system in the sector as high-risk.",
+      "source_ref": "Annex III(5)"
+    },
+    {
+      "id": "LawEnforcementListedAISystem",
+      "parent": "AnnexIIIListedAISystem",
+      "label": "Annex III: Law enforcement",
+      "description": "AI systems in the specified Annex III use cases for law enforcement; this does not classify every system in the sector as high-risk.",
+      "source_ref": "Annex III(6)"
+    },
+    {
+      "id": "MigrationListedAISystem",
+      "parent": "AnnexIIIListedAISystem",
+      "label": "Annex III: Migration, asylum and border control",
+      "description": "AI systems in the specified Annex III use cases for migration, asylum and border control; this does not classify every system in the sector as high-risk.",
+      "source_ref": "Annex III(7)"
+    },
+    {
+      "id": "JusticeDemocracyListedAISystem",
+      "parent": "AnnexIIIListedAISystem",
+      "label": "Annex III: Administration of justice and democratic processes",
+      "description": "AI systems in the specified Annex III use cases for administration of justice and democratic processes; this does not classify every system in the sector as high-risk.",
+      "source_ref": "Annex III(8)"
+    },
+    {
+      "id": "DirectInteractionAISystem",
+      "parent": "AISystem",
+      "label": "Direct-interaction AI system",
+      "description": "System intended to interact directly with natural persons.",
+      "source_ref": "Article 50(1)"
+    },
+    {
+      "id": "SyntheticContentAISystem",
+      "parent": "AISystem",
+      "label": "Synthetic-content AI system",
+      "description": "System generating synthetic audio, image, video or text content.",
+      "source_ref": "Article 50(2)"
+    },
+    {
+      "id": "EmotionRecognitionAISystem",
+      "parent": "AISystem",
+      "label": "Emotion-recognition AI system",
+      "description": "Emotion-recognition system subject to transparency rules.",
+      "source_ref": "Article 50(3)"
+    },
+    {
+      "id": "DeepFakeAISystem",
+      "parent": "AISystem",
+      "label": "Deep-fake AI system",
+      "description": "System generating or manipulating image, audio or video content constituting a deep fake.",
+      "source_ref": "Article 50(4)"
+    },
+    {
+      "id": "GeneralPurposeAIModel",
+      "parent": null,
+      "label": "General-purpose AI model",
+      "description": "General-purpose AI model as addressed in Chapter V.",
+      "source_ref": "Article 3(63)"
+    },
+    {
+      "id": "AIPractice",
+      "parent": null,
+      "label": "AI practice",
+      "description": "Use, placement or putting into service of an AI system as described in Article 5.",
+      "source_ref": "Article 5"
+    },
+    {
+      "id": "ProhibitedPractice",
+      "parent": "AIPractice",
+      "label": "Prohibited AI practice",
+      "description": "Practice prohibited subject to the applicable Article 5 conditions and exceptions.",
+      "source_ref": "Article 5(1)"
+    },
+    {
+      "id": "ManipulativePractice",
+      "parent": "ProhibitedPractice",
+      "label": "Manipulative or deceptive technique",
+      "description": "Article 5(1) point (a) practice, subject to its stated scope and exceptions.",
+      "source_ref": "Article 5(1)(a)"
+    },
+    {
+      "id": "VulnerabilityExploitationPractice",
+      "parent": "ProhibitedPractice",
+      "label": "Exploitation of vulnerabilities",
+      "description": "Article 5(1) point (b) practice, subject to its stated scope and exceptions.",
+      "source_ref": "Article 5(1)(b)"
+    },
+    {
+      "id": "NonConsensualIntimateContentPractice",
+      "parent": "ProhibitedPractice",
+      "label": "Non-consensual intimate or sexual content",
+      "description": "Article 5(1) point (ba) practice, subject to its stated scope and exceptions.",
+      "source_ref": "Article 5(1)(ba)"
+    },
+    {
+      "id": "ChildSexualAbuseMaterialPractice",
+      "parent": "ProhibitedPractice",
+      "label": "Child sexual abuse material or performance",
+      "description": "Article 5(1) point (bb) practice, subject to its stated scope and exceptions.",
+      "source_ref": "Article 5(1)(bb)"
+    },
+    {
+      "id": "SocialScoringPractice",
+      "parent": "ProhibitedPractice",
+      "label": "Social scoring",
+      "description": "Article 5(1) point (c) practice, subject to its stated scope and exceptions.",
+      "source_ref": "Article 5(1)(c)"
+    },
+    {
+      "id": "SolelyProfilingCrimeRiskPractice",
+      "parent": "ProhibitedPractice",
+      "label": "Crime risk assessment based solely on profiling",
+      "description": "Article 5(1) point (d) practice, subject to its stated scope and exceptions.",
+      "source_ref": "Article 5(1)(d)"
+    },
+    {
+      "id": "UntargetedFacialScrapingPractice",
+      "parent": "ProhibitedPractice",
+      "label": "Untargeted facial-image scraping",
+      "description": "Article 5(1) point (e) practice, subject to its stated scope and exceptions.",
+      "source_ref": "Article 5(1)(e)"
+    },
+    {
+      "id": "WorkplaceEducationEmotionPractice",
+      "parent": "ProhibitedPractice",
+      "label": "Workplace or education emotion inference",
+      "description": "Article 5(1) point (f) practice, subject to its stated scope and exceptions.",
+      "source_ref": "Article 5(1)(f)"
+    },
+    {
+      "id": "SensitiveBiometricCategorisationPractice",
+      "parent": "ProhibitedPractice",
+      "label": "Sensitive biometric categorisation",
+      "description": "Article 5(1) point (g) practice, subject to its stated scope and exceptions.",
+      "source_ref": "Article 5(1)(g)"
+    },
+    {
+      "id": "RealTimeRemoteBiometricIdentificationPractice",
+      "parent": "ProhibitedPractice",
+      "label": "Real-time remote biometric identification for law enforcement",
+      "description": "Article 5(1) point (h) practice, subject to its stated scope and exceptions.",
+      "source_ref": "Article 5(1)(h)"
+    },
+    {
+      "id": "LegalStatement",
+      "parent": null,
+      "label": "Legal statement",
+      "description": "Cited statement of classification, obligation or prohibition.",
+      "source_ref": null
+    },
+    {
+      "id": "Obligation",
+      "parent": "LegalStatement",
+      "label": "Obligation",
+      "description": "Obligation recorded as an individual with a source provision.",
+      "source_ref": null
+    },
+    {
+      "id": "Prohibition",
+      "parent": "LegalStatement",
+      "label": "Prohibition",
+      "description": "Prohibition recorded as an individual with a source provision.",
+      "source_ref": null
+    },
+    {
+      "id": "ClassificationRule",
+      "parent": "LegalStatement",
+      "label": "Classification rule",
+      "description": "Classification rule recorded as an individual with a source provision.",
+      "source_ref": null
+    },
+    {
+      "id": "LegalProvision",
+      "parent": null,
+      "label": "Legal provision",
+      "description": "Cited Act article, point or annex provision.",
+      "source_ref": null
+    },
+    {
+      "id": "ActVersion",
+      "parent": null,
+      "label": "Act version",
+      "description": "Dated version of the Act used as source.",
+      "source_ref": null
+    }
+  ],
+  "statements": [
+    {
+      "id": "Obligation_Article16_a",
+      "type": "Obligation",
+      "label": "Ensure high-risk AI systems are compliant with the requirements set out in Section 2",
+      "description": "Ensure high-risk AI systems are compliant with the requirements set out in Section 2",
+      "source_ref": "Article 16(a)",
+      "evidence": "ensure that their high-risk AI systems are compliant with the requirements set out in Section 2",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": null,
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article16_b",
+      "type": "Obligation",
+      "label": "Indicate provider name, trade name/trademark, and contact address on the system or packaging/documentation",
+      "description": "Indicate provider name, trade name/trademark, and contact address on the system or packaging/documentation",
+      "source_ref": "Article 16(b)",
+      "evidence": "indicate on the high-risk AI system or, where that is not possible, on its packaging or its accompanying documentation",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "Where indication on the system is not possible, on its packaging or accompanying documentation",
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article16_c",
+      "type": "Obligation",
+      "label": "Have a quality management system in place which complies with Article 17",
+      "description": "Have a quality management system in place which complies with Article 17",
+      "source_ref": "Article 16(c)",
+      "evidence": "have a quality management system in place which complies with Article 17",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": null,
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article16_d",
+      "type": "Obligation",
+      "label": "Keep the documentation referred to in Article 18",
+      "description": "Keep the documentation referred to in Article 18",
+      "source_ref": "Article 16(d)",
+      "evidence": "keep the documentation referred to in Article 18",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": null,
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article16_e",
+      "type": "Obligation",
+      "label": "Keep the logs automatically generated by the high-risk AI system as referred to in Article 19",
+      "description": "Keep the logs automatically generated by the high-risk AI system as referred to in Article 19",
+      "source_ref": "Article 16(e)",
+      "evidence": "when under their control, keep the logs automatically generated by their high-risk AI systems",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "when under their control",
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article16_f",
+      "type": "Obligation",
+      "label": "Ensure the system undergoes the relevant conformity assessment procedure per Article 43 before placement on market",
+      "description": "Ensure the system undergoes the relevant conformity assessment procedure per Article 43 before placement on market",
+      "source_ref": "Article 16(f)",
+      "evidence": "ensure that the high-risk AI system undergoes the relevant conformity assessment procedure as referred to in Article 43",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "prior to its being placed on the market or put into service",
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article16_g",
+      "type": "Obligation",
+      "label": "Draw up an EU declaration of conformity in accordance with Article 47",
+      "description": "Draw up an EU declaration of conformity in accordance with Article 47",
+      "source_ref": "Article 16(g)",
+      "evidence": "draw up an EU declaration of conformity in accordance with Article 47",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": null,
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article16_h",
+      "type": "Obligation",
+      "label": "Affix the CE marking to indicate conformity with this Regulation in accordance with Article 48",
+      "description": "Affix the CE marking to indicate conformity with this Regulation in accordance with Article 48",
+      "source_ref": "Article 16(h)",
+      "evidence": "affix the CE marking to the high-risk AI system or, where that is not possible, on its packaging",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "Where affixing on the system is not possible, on its packaging or accompanying documentation",
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article16_i",
+      "type": "Obligation",
+      "label": "Comply with the registration obligations referred to in Article 49(1)",
+      "description": "Comply with the registration obligations referred to in Article 49(1)",
+      "source_ref": "Article 16(i)",
+      "evidence": "comply with the registration obligations referred to in Article 49(1)",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": null,
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article16_j",
+      "type": "Obligation",
+      "label": "Take necessary corrective actions and provide information as required in Article 20",
+      "description": "Take necessary corrective actions and provide information as required in Article 20",
+      "source_ref": "Article 16(j)",
+      "evidence": "take the necessary corrective actions and provide information as required in Article 20",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": null,
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article16_k",
+      "type": "Obligation",
+      "label": "Demonstrate conformity of the system with Section 2 requirements upon reasoned request of a national competent authority",
+      "description": "Demonstrate conformity of the system with Section 2 requirements upon reasoned request of a national competent authority",
+      "source_ref": "Article 16(k)",
+      "evidence": "upon a reasoned request of a national competent authority, demonstrate the conformity of the high-risk AI system",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "upon a reasoned request of a national competent authority",
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article16_l",
+      "type": "Obligation",
+      "label": "Ensure the system complies with accessibility requirements per Directives (EU) 2016/2102 and (EU) 2019/882",
+      "description": "Ensure the system complies with accessibility requirements per Directives (EU) 2016/2102 and (EU) 2019/882",
+      "source_ref": "Article 16(l)",
+      "evidence": "ensure that the high-risk AI system complies with accessibility requirements in accordance with Directives (EU) 2016/2102",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": null,
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article_26_1_",
+      "type": "Obligation",
+      "label": "Take technical and organisational measures to use the system in accordance with its instructions for use.",
+      "description": "Take technical and organisational measures to use the system in accordance with its instructions for use.",
+      "source_ref": "Article 26(1)",
+      "evidence": "take appropriate technical and organisational measures to ensure they use such systems in accordance with the instructions for use",
+      "actor_roles": [
+        "Deployer"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "pursuant to paragraphs 3 and 6",
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article_26_2_",
+      "type": "Obligation",
+      "label": "Assign human oversight to natural persons with the necessary competence, training, authority, and support.",
+      "description": "Assign human oversight to natural persons with the necessary competence, training, authority, and support.",
+      "source_ref": "Article 26(2)",
+      "evidence": "assign human oversight to natural persons who have the necessary competence, training and authority",
+      "actor_roles": [
+        "Deployer"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": null,
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article_26_4_",
+      "type": "Obligation",
+      "label": "Ensure input data is relevant and sufficiently representative for the intended purpose of the system.",
+      "description": "Ensure input data is relevant and sufficiently representative for the intended purpose of the system.",
+      "source_ref": "Article 26(4)",
+      "evidence": "ensure that input data is relevant and sufficiently representative in view of the intended purpose",
+      "actor_roles": [
+        "Deployer"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "to the extent the deployer exercises control over the input data",
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article_26_5_",
+      "type": "Obligation",
+      "label": "Monitor the operation of the system based on its instructions for use and inform providers where relevant.",
+      "description": "Monitor the operation of the system based on its instructions for use and inform providers where relevant.",
+      "source_ref": "Article 26(5)",
+      "evidence": "monitor the operation of the high-risk AI system on the basis of the instructions for use",
+      "actor_roles": [
+        "Deployer"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": null,
+      "exception": "shall not cover sensitive operational data of deployers of AI systems which are law enforcement authorities"
+    },
+    {
+      "id": "Obligation_Article_26_6_",
+      "type": "Obligation",
+      "label": "Keep automatically generated logs for at least six months, to the extent they are under the deployer's control.",
+      "description": "Keep automatically generated logs for at least six months, to the extent they are under the deployer's control.",
+      "source_ref": "Article 26(6)",
+      "evidence": "keep the logs automatically generated by that high-risk AI system to the extent such logs are under their control",
+      "actor_roles": [
+        "Deployer"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "to the extent such logs are under their control",
+      "exception": "unless provided otherwise in applicable Union or national law, in particular in Union law on the protection of personal data"
+    },
+    {
+      "id": "Obligation_Article_26_7_",
+      "type": "Obligation",
+      "label": "Inform workers' representatives and affected workers before putting into service or using a high-risk AI system at the workplace.",
+      "description": "Inform workers' representatives and affected workers before putting into service or using a high-risk AI system at the workplace.",
+      "source_ref": "Article 26(7)",
+      "evidence": "that they will be subject to the use of the high-risk AI system",
+      "actor_roles": [
+        "Deployer"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "Before putting into service or using a high-risk AI system at the workplace",
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article_26_11_",
+      "type": "Obligation",
+      "label": "Inform natural persons that they are subject to the use of the high-risk AI system.",
+      "description": "Inform natural persons that they are subject to the use of the high-risk AI system.",
+      "source_ref": "Article 26(11)",
+      "evidence": "shall inform the natural persons that they are subject to the use of the high-risk AI system",
+      "actor_roles": [
+        "Deployer"
+      ],
+      "system_categories": [
+        "HighRiskAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "deployers of high-risk AI systems referred to in Annex III that make decisions or assist in making decisions related to natural persons",
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article53_a",
+      "type": "Obligation",
+      "label": "Draw up and keep up-to-date technical documentation containing, at minimum, the Annex XI information, to provide upon request to the AI Office and national competent authorities.",
+      "description": "Draw up and keep up-to-date technical documentation containing, at minimum, the Annex XI information, to provide upon request to the AI Office and national competent authorities.",
+      "source_ref": "Article 53(1)(a)",
+      "evidence": "draw up and keep up-to-date the technical documentation of the model",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "GeneralPurposeAIModel"
+      ],
+      "practice_categories": [],
+      "condition": "shall contain, at a minimum, the information set out in Annex XI; for the purpose of providing it, upon request, to the AI Office and the national competent authorities",
+      "exception": "Not applicable to models released under a free and open-source licence with publicly available parameters, weights, architecture and usage information; does not apply to models with systemic risks (Article 53(2))"
+    },
+    {
+      "id": "Obligation_Article53_b",
+      "type": "Obligation",
+      "label": "Draw up, keep up-to-date and make available information and documentation enabling downstream providers to understand capabilities and limitations and to comply, containing at minimum the Annex XII elements.",
+      "description": "Draw up, keep up-to-date and make available information and documentation enabling downstream providers to understand capabilities and limitations and to comply, containing at minimum the Annex XII elements.",
+      "source_ref": "Article 53(1)(b)",
+      "evidence": "draw up, keep up-to-date and make available information",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "GeneralPurposeAIModel"
+      ],
+      "practice_categories": [],
+      "condition": "without prejudice to intellectual property rights and confidential business information or trade secrets in accordance with Union and national law; shall enable good understanding of capabilities and limitations and compliance, and contain, at a minimum, the elements set out in Annex XII",
+      "exception": "Not applicable to models released under a free and open-source licence with publicly available parameters, weights, architecture and usage information; does not apply to models with systemic risks (Article 53(2))"
+    },
+    {
+      "id": "Obligation_Article53_c",
+      "type": "Obligation",
+      "label": "Put in place a policy to comply with Union copyright law, in particular to identify and comply with reservations of rights under Article 4(3) of Directive (EU) 2019/790.",
+      "description": "Put in place a policy to comply with Union copyright law, in particular to identify and comply with reservations of rights under Article 4(3) of Directive (EU) 2019/790.",
+      "source_ref": "Article 53(1)(c)",
+      "evidence": "put in place a policy to comply with Union law on copyright and related rights",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "GeneralPurposeAIModel"
+      ],
+      "practice_categories": [],
+      "condition": "in particular to identify and comply with, including through state-of-the-art technologies, a reservation of rights expressed pursuant to Article 4(3) of Directive (EU) 2019/790",
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article53_d",
+      "type": "Obligation",
+      "label": "Draw up and make publicly available a sufficiently detailed summary of the content used to train the model, following an AI Office template.",
+      "description": "Draw up and make publicly available a sufficiently detailed summary of the content used to train the model, following an AI Office template.",
+      "source_ref": "Article 53(1)(d)",
+      "evidence": "draw up and make publicly available a sufficiently detailed summary about the content used for training",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "GeneralPurposeAIModel"
+      ],
+      "practice_categories": [],
+      "condition": "according to a template provided by the AI Office",
+      "exception": null
+    },
+    {
+      "id": "Obligation_Article50_1",
+      "type": "Obligation",
+      "label": "Inform natural persons they are interacting with an AI system, unless obvious to a reasonably well-informed, observant and circumspect person in the circumstances and context of use.",
+      "description": "Inform natural persons they are interacting with an AI system, unless obvious to a reasonably well-informed, observant and circumspect person in the circumstances and context of use.",
+      "source_ref": "Article 50(1)",
+      "evidence": "the natural persons concerned are informed that they are interacting with an AI system",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "DirectInteractionAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "unless this is obvious from the point of view of a natural person who is reasonably well-informed, observant and circumspect, taking into account the circumstances and the context of use",
+      "exception": "Shall not apply to AI systems authorised by law to detect, prevent, investigate or prosecute criminal offences, subject to appropriate safeguards for the rights and freedoms of third parties, unless those systems are available for the public to report a criminal offence."
+    },
+    {
+      "id": "Obligation_Article50_2",
+      "type": "Obligation",
+      "label": "Mark outputs in machine-readable format and detectable as artificially generated or manipulated; technical solutions must be effective, interoperable, robust and reliable as far as technically feasible given content type, cost, and state of the art.",
+      "description": "Mark outputs in machine-readable format and detectable as artificially generated or manipulated; technical solutions must be effective, interoperable, robust and reliable as far as technically feasible given content type, cost, and state of the art.",
+      "source_ref": "Article 50(2)",
+      "evidence": "the outputs of the AI system are marked in a machine-readable format and detectable as artificially generated or manipulated",
+      "actor_roles": [
+        "Provider"
+      ],
+      "system_categories": [
+        "SyntheticContentAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "effective, interoperable, robust and reliable as far as this is technically feasible, taking into account the specificities and limitations of various types of content, the costs of implementation and the generally acknowledged state of the art",
+      "exception": "Shall not apply to the extent the AI systems perform an assistive function for standard editing or do not substantially alter the input data provided by the deployer or the semantics thereof, or where authorised by law to detect, prevent, investigate or prosecute criminal offences."
+    },
+    {
+      "id": "Obligation_Article50_3",
+      "type": "Obligation",
+      "label": "Inform natural persons exposed to the operation of the system and process personal data in accordance with applicable EU data protection law.",
+      "description": "Inform natural persons exposed to the operation of the system and process personal data in accordance with applicable EU data protection law.",
+      "source_ref": "Article 50(3)",
+      "evidence": "shall inform the natural persons exposed thereto of the operation of the system",
+      "actor_roles": [
+        "Deployer"
+      ],
+      "system_categories": [
+        "EmotionRecognitionAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "shall process the personal data in accordance with Regulations (EU) 2016/679 and (EU) 2018/1725 and Directive (EU) 2016/680, as applicable",
+      "exception": "Shall not apply to AI systems used for biometric categorisation and emotion recognition, which are permitted by law to detect, prevent or investigate criminal offences, subject to appropriate safeguards for the rights and freedoms of third parties, and in accordance with Union law."
+    },
+    {
+      "id": "Obligation_Article50_4",
+      "type": "Obligation",
+      "label": "Disclose that the content has been artificially generated or manipulated. For artistic, creative, satirical, fictional or analogous works, limited to disclosure of existence in an appropriate manner not hampering display or enjoyment.",
+      "description": "Disclose that the content has been artificially generated or manipulated. For artistic, creative, satirical, fictional or analogous works, limited to disclosure of existence in an appropriate manner not hampering display or enjoyment.",
+      "source_ref": "Article 50(4)",
+      "evidence": "shall disclose that the content has been artificially generated or manipulated",
+      "actor_roles": [
+        "Deployer"
+      ],
+      "system_categories": [
+        "DeepFakeAISystem"
+      ],
+      "practice_categories": [],
+      "condition": null,
+      "exception": "Shall not apply where the use is authorised by law to detect, prevent, investigate or prosecute criminal offence. For evidently artistic, creative, satirical, fictional or analogous work or programme, limited to disclosure of the existence of such generated or manipulated content in an appropriate manner that does not hamper the display or enjoyment of the work."
+    },
+    {
+      "id": "Obligation_Article50_5",
+      "type": "Obligation",
+      "label": "Disclose that the text has been artificially generated or manipulated.",
+      "description": "Disclose that the text has been artificially generated or manipulated.",
+      "source_ref": "Article 50(4)",
+      "evidence": "shall disclose that the text has been artificially generated or manipulated",
+      "actor_roles": [
+        "Deployer"
+      ],
+      "system_categories": [
+        "SyntheticContentAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "published with the purpose of informing the public on matters of public interest",
+      "exception": "Shall not apply where the use is authorised by law to detect, prevent, investigate or prosecute criminal offences or where the AI-generated content has undergone a process of human review or editorial control and where a natural or legal person holds editorial responsibility for the publication of the content."
+    },
+    {
+      "id": "Rule_Article6_1",
+      "type": "ClassificationRule",
+      "label": "Annex I product route to high-risk classification",
+      "description": "Annex I product route to high-risk classification",
+      "source_ref": "Article 6(1)",
+      "evidence": "that AI system shall be considered to be high-risk where both of the following conditions are fulfilled",
+      "actor_roles": [],
+      "system_categories": [
+        "AnnexIProductAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "Both safety-component/product coverage by Annex I legislation and required third-party conformity assessment.",
+      "exception": "Subject to Article 6(1a) and 6(1c) exclusions."
+    },
+    {
+      "id": "Rule_Article6_2",
+      "type": "ClassificationRule",
+      "label": "Annex III listed route to high-risk classification",
+      "description": "Annex III listed route to high-risk classification",
+      "source_ref": "Article 6(2)",
+      "evidence": "AI systems referred to in Annex III shall be considered to be high-risk",
+      "actor_roles": [],
+      "system_categories": [
+        "AnnexIIIListedAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "The system is in an Annex III listed use case.",
+      "exception": "Article 6(3) derogation may apply; profiling of natural persons remains high-risk."
+    },
+    {
+      "id": "Rule_Article6_3",
+      "type": "ClassificationRule",
+      "label": "Annex III derogation from high-risk classification",
+      "description": "Annex III derogation from high-risk classification",
+      "source_ref": "Article 6(3)",
+      "evidence": "an AI system referred to in Annex III shall not be considered to be high-risk where it does not pose a significant risk",
+      "actor_roles": [],
+      "system_categories": [
+        "AnnexIIIListedAISystem"
+      ],
+      "practice_categories": [],
+      "condition": "No significant risk of harm and at least one listed Article 6(3)(a)–(d) circumstance.",
+      "exception": "An Annex III system that performs profiling of natural persons is always high-risk."
+    },
+    {
+      "id": "Prohibition_Article5_a",
+      "type": "Prohibition",
+      "label": "Subliminal, manipulative or deceptive techniques materially distorting behaviour causing significant harm",
+      "description": "Subliminal, manipulative or deceptive techniques materially distorting behaviour causing significant harm",
+      "source_ref": "Article 5(1)(a)",
+      "evidence": "the placing on the market, the putting into service or the use of an AI system that deploys subliminal techniques beyond a person's consciousness",
+      "actor_roles": [],
+      "system_categories": [],
+      "practice_categories": [
+        "ManipulativePractice"
+      ],
+      "condition": "Materially distorts behaviour and causes or is reasonably likely to cause significant harm.",
+      "exception": null
+    },
+    {
+      "id": "Prohibition_Article5_b",
+      "type": "Prohibition",
+      "label": "Exploiting vulnerabilities of a person or group due to age, disability or social/economic situation",
+      "description": "Exploiting vulnerabilities of a person or group due to age, disability or social/economic situation",
+      "source_ref": "Article 5(1)(b)",
+      "evidence": "exploits any of the vulnerabilities of a natural person or a specific group of persons due to their age, disability",
+      "actor_roles": [],
+      "system_categories": [],
+      "practice_categories": [
+        "VulnerabilityExploitationPractice"
+      ],
+      "condition": "Materially distorts behaviour and causes or is reasonably likely to cause significant harm.",
+      "exception": null
+    },
+    {
+      "id": "Prohibition_Article5_ba",
+      "type": "Prohibition",
+      "label": "Generation or manipulation of intimate or sexually explicit material of an identifiable person",
+      "description": "Generation or manipulation of intimate or sexually explicit material of an identifiable person",
+      "source_ref": "Article 5(1)(ba)",
+      "evidence": "generates or manipulates realistic images, videos, audio or similar material of an identifiable natural person's intimate parts",
+      "actor_roles": [],
+      "system_categories": [],
+      "practice_categories": [
+        "NonConsensualIntimateContentPractice"
+      ],
+      "condition": "Applies where done without that person's freely-given, specific, informed, unambiguous and explicit consent for that generation or manipulation. Article 5(1a) limits placement, service and use; Article 5(1b) limits manipulation.",
+      "exception": null
+    },
+    {
+      "id": "Prohibition_Article5_bb",
+      "type": "Prohibition",
+      "label": "Generation or manipulation of material within the meaning of Article 2(c) and (e) of Directive 2011/93/EU",
+      "description": "Generation or manipulation of material within the meaning of Article 2(c) and (e) of Directive 2011/93/EU",
+      "source_ref": "Article 5(1)(bb)",
+      "evidence": "an AI system that generates or manipulates material or performance within the meaning of Article 2, points (c) and (e), of Directive 2011/93/EU",
+      "actor_roles": [],
+      "system_categories": [],
+      "practice_categories": [
+        "ChildSexualAbuseMaterialPractice"
+      ],
+      "condition": null,
+      "exception": "Except where a 'without right' defence applies under national law. Article 5(1a) further limits placement, service and use."
+    },
+    {
+      "id": "Prohibition_Article5_c",
+      "type": "Prohibition",
+      "label": "Social scoring (evaluation/classification of persons or groups over time) leading to detrimental or unfavourable treatment",
+      "description": "Social scoring (evaluation/classification of persons or groups over time) leading to detrimental or unfavourable treatment",
+      "source_ref": "Article 5(1)(c)",
+      "evidence": "AI systems for the evaluation or classification of natural persons or groups of persons over a certain period of time based on their social behaviour",
+      "actor_roles": [],
+      "system_categories": [],
+      "practice_categories": [
+        "SocialScoringPractice"
+      ],
+      "condition": "Applies where the social score leads to detrimental or unfavourable treatment in contexts unrelated to where the data was collected, or that is unjustified or disproportionate to the behaviour or its gravity.",
+      "exception": null
+    },
+    {
+      "id": "Prohibition_Article5_d",
+      "type": "Prohibition",
+      "label": "Predictive risk assessment of a person committing a criminal offence based solely on profiling or personality traits",
+      "description": "Predictive risk assessment of a person committing a criminal offence based solely on profiling or personality traits",
+      "source_ref": "Article 5(1)(d)",
+      "evidence": "to assess or predict the risk of a natural person committing a criminal offence, based solely on the profiling of a natural person",
+      "actor_roles": [],
+      "system_categories": [],
+      "practice_categories": [
+        "SolelyProfilingCrimeRiskPractice"
+      ],
+      "condition": null,
+      "exception": "Shall not apply to AI systems used to support the human assessment of a person's involvement in criminal activity already based on objective and verifiable facts directly linked to a criminal activity."
+    },
+    {
+      "id": "Prohibition_Article5_e",
+      "type": "Prohibition",
+      "label": "Untargeted facial-image scraping",
+      "description": "Untargeted facial-image scraping",
+      "source_ref": "Article 5(1)(e)",
+      "evidence": "untargeted scraping of facial images from the internet or CCTV footage",
+      "actor_roles": [],
+      "system_categories": [],
+      "practice_categories": [
+        "UntargetedFacialScrapingPractice"
+      ],
+      "condition": null,
+      "exception": null
+    },
+    {
+      "id": "Prohibition_Article5_f",
+      "type": "Prohibition",
+      "label": "Workplace or education emotion inference",
+      "description": "Workplace or education emotion inference",
+      "source_ref": "Article 5(1)(f)",
+      "evidence": "to infer emotions of a natural person in the areas of workplace and education institutions",
+      "actor_roles": [],
+      "system_categories": [],
+      "practice_categories": [
+        "WorkplaceEducationEmotionPractice"
+      ],
+      "condition": null,
+      "exception": "Medical or safety reasons."
+    },
+    {
+      "id": "Prohibition_Article5_g",
+      "type": "Prohibition",
+      "label": "Sensitive biometric categorisation",
+      "description": "Sensitive biometric categorisation",
+      "source_ref": "Article 5(1)(g)",
+      "evidence": "to deduce or infer their race, political opinions, trade union membership",
+      "actor_roles": [],
+      "system_categories": [],
+      "practice_categories": [
+        "SensitiveBiometricCategorisationPractice"
+      ],
+      "condition": null,
+      "exception": "Lawfully acquired biometric dataset labelling/filtering and law-enforcement biometric categorisation are excluded."
+    },
+    {
+      "id": "Prohibition_Article5_h",
+      "type": "Prohibition",
+      "label": "Real-time remote biometric identification for law enforcement",
+      "description": "Real-time remote biometric identification for law enforcement",
+      "source_ref": "Article 5(1)(h)",
+      "evidence": "the use of ‘real-time’ remote biometric identification systems in publicly accessible spaces",
+      "actor_roles": [],
+      "system_categories": [],
+      "practice_categories": [
+        "RealTimeRemoteBiometricIdentificationPractice"
+      ],
+      "condition": "For law-enforcement purposes.",
+      "exception": "Strict necessity for one of the Article 5(1)(h)(i)–(iii) objectives, plus Article 5(2)–(7) safeguards and authorisation."
+    },
+    {
+      "id": "Obligation_Article70_1",
+      "type": "Obligation",
+      "label": "Member States designate national competent authorities",
+      "description": "Member States establish or designate at least one notifying authority and at least one market surveillance authority.",
+      "source_ref": "Article 70(1)",
+      "evidence": "Each Member State shall establish or designate as national competent authorities",
+      "actor_roles": [
+        "MemberState"
+      ],
+      "system_categories": [],
+      "practice_categories": [],
+      "condition": null,
+      "exception": null
+    }
+  ]
+}

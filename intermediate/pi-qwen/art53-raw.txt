@@ -1,0 +1,43 @@
+
+
+{
+  "source": "Regulation (EU) 2024/1689, Article 53(1), CELEX 02024R1689-20260727, English consolidated text dated 27 July 2026",
+  "obligations": [
+    {
+      "point": "(a)",
+      "actor": "providers of general-purpose AI models",
+      "target": "technical documentation of the model (training and testing process, evaluation results)",
+      "summary": "Draw up and keep up-to-date technical documentation containing, at minimum, the Annex XI information, to provide upon request to the AI Office and national competent authorities.",
+      "evidence": "draw up and keep up-to-date the technical documentation of the model",
+      "condition": "shall contain, at a minimum, the information set out in Annex XI; for the purpose of providing it, upon request, to the AI Office and the national competent authorities",
+      "exception": "Not applicable to models released under a free and open-source licence with publicly available parameters, weights, architecture and usage information; does not apply to models with systemic risks (Article 53(2))"
+    },
+    {
+      "point": "(b)",
+      "actor": "providers of general-purpose AI models",
+      "target": "information and documentation for providers of AI systems integrating the model",
+      "summary": "Draw up, keep up-to-date and make available information and documentation enabling downstream providers to understand capabilities and limitations and to comply, containing at minimum the Annex XII elements.",
+      "evidence": "draw up, keep up-to-date and make available information",
+      "condition": "without prejudice to intellectual property rights and confidential business information or trade secrets in accordance with Union and national law; shall enable good understanding of capabilities and limitations and compliance, and contain, at a minimum, the elements set out in Annex XII",
+      "exception": "Not applicable to models released under a free and open-source licence with publicly available parameters, weights, architecture and usage information; does not apply to models with systemic risks (Article 53(2))"
+    },
+    {
+      "point": "(c)",
+      "actor": "providers of general-purpose AI models",
+      "target": "policy on copyright and related rights",
+      "summary": "Put in place a policy to comply with Union copyright law, in particular to identify and comply with reservations of rights under Article 4(3) of Directive (EU) 2019/790.",
+      "evidence": "put in place a policy to comply with Union law on copyright and related rights",
+      "condition": "in particular to identify and comply with, including through state-of-the-art technologies, a reservation of rights expressed pursuant to Article 4(3) of Directive (EU) 2019/790",
+      "exception": null
+    },
+    {
+      "point": "(d)",
+      "actor": "providers of general-purpose AI models",
+      "target": "public summary of training content",
+      "summary": "Draw up and make publicly available a sufficiently detailed summary of the content used to train the model, following an AI Office template.",
+      "evidence": "draw up and make publicly available a sufficiently detailed summary about the content used for training",
+      "condition": "according to a template provided by the AI Office",
+      "exception": null
+    }
+  ]
+}

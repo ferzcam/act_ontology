@@ -12,14 +12,14 @@
   object/.style={-{Latex[length=2.5mm]},thick,gray!75!black},
   edge/.style={font=\footnotesize,fill=white,inner sep=2pt,align=center}
 ]
-\node[font=\Large\bfseries,anchor=west] at (-2.2,6.2) {EU AI Act ontology: proposed record-and-query model};
-\node[font=\small,anchor=west,text=gray!70!black] at (-2.2,5.7) {Entity types and links; design draft, not a final OWL schema};
+\node[font=\Large\bfseries,anchor=west] at (-2.2,6.2) {EU AI Act ontology: record-and-query model};
+\node[font=\small,anchor=west,text=gray!70!black] at (-2.2,5.7) {Entity types and links in the prototype};
 
 \node[class] (system) at (0,4.0) {\textbf{AI system category}\\OWL class\\\footnotesize e.g., high-risk AI system};
 \node[class] (practice) at (0,2.0) {\textbf{Practice category}\\OWL class\\\footnotesize e.g., prohibited practice};
-\node[class] (actor) at (0,0.0) {\textbf{Actor role}\\OWL class\\\footnotesize e.g., provider, deployer\\authority};
+\node[class] (actor) at (0,0.0) {\textbf{Actor role}\\OWL class\\\footnotesize e.g., provider, deployer};
 
-\node[norm] (norm) at (6.4,2.0) {\textbf{Legal norm}\\OWL individual\\\footnotesize obligation or prohibition};
+\node[norm] (norm) at (6.4,2.0) {\textbf{Legal statement}\\OWL individual\\\footnotesize obligation, prohibition\\or classification rule};
 \node[source] (provision) at (11.2,2.0) {\textbf{Legal provision}\\OWL individual\\\footnotesize article or annex item};
 \node[source] (version) at (15.8,2.0) {\textbf{Act version}\\OWL individual\\\footnotesize dated source text};
 

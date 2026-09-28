@@ -6,3 +6,5 @@ README.html
 *.pdf
 *.aux
 *.log
+.venv/
+__pycache__/
