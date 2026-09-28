@@ -14,7 +14,7 @@ uv venv .venv --python 3.10
 uv pip install --python .venv/bin/python --no-deps -r requirements.txt
 ```
 
-Requirements: Git, `uv`, Java 21, `pdftotext` (Poppler), `curl` and `sha256sum`. The six pinned packages in `requirements.txt` are the lightweight runtime for mOWL's OWLAPI wrapper, ELK and RDFLib. `--no-deps` avoids mOWL's unused machine-learning dependency stack; the needed dependencies are pinned explicitly. Check `java -version` before building. Optional tools for later steps are Pi with local `borg/qwen3.8-27b`, Pandoc, a LaTeX installation with TikZ, and Protégé 5.6.9.
+Requirements: Git, `uv`, Java 21, `pdftotext` (Poppler), `curl` and `sha256sum`. The six pinned packages in `requirements.txt` are the lightweight runtime for mOWL's OWLAPI wrapper, ELK and RDFLib. `--no-deps` avoids mOWL's unused machine-learning dependency stack; the needed dependencies are pinned explicitly. Check `java -version` before building. Optional tools for later steps are Pi with local `borg/qwen3.8-27b`, Pandoc with LaTeX for rendering the technical note, and Protégé 5.6.9.
 
 ## 2. Obtain and verify the Act PDFs
 
@@ -63,7 +63,7 @@ To generate new candidate outputs, use your own chat-completions model through O
 
 `--prompt art70` runs one saved prompt; `--all` runs all eight. Outputs and model metadata go to gitignored `reproduced/<provider>/`. Different models and runs may produce different candidates. Compare them with the preserved raw outputs, verify every claim against the Act, and document corrections as in the [review log](intermediate/review.md). The builder does not automatically consume API output; curation into `ontology/reviewed-records.json` is a human review step.
 
-## 5. Render the technical note and diagram (optional)
+## 5. View the diagram and render the technical note (optional)
 
 With Pandoc and LaTeX, render the ontology technical note as a one-page PDF:
 
@@ -71,13 +71,11 @@ With Pandoc and LaTeX, render the ontology technical note as a one-page PDF:
 pandoc docs/technical-note.md -o docs/technical-note.pdf --pdf-engine=pdflatex -V geometry:margin=0.5in -V fontsize=10pt
 ```
 
-With TikZ installed, render the entity–relation diagram:
+The entity–relation diagram is included here as a PNG:
 
-```bash
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory fig fig/conceptual-model.tex
-```
+![Entity types and links in the EU AI Act ontology](fig/conceptual-model.png)
 
-The generated PDFs are gitignored; the Markdown and TikZ sources are tracked.
+The generated technical-note PDF is gitignored; the Markdown source and diagram PNG are tracked.
 
 ## 6. Showcase in Protégé (optional)
 
