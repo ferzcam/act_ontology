@@ -63,9 +63,9 @@ To generate new candidate outputs, use your own chat-completions model through O
 
 `--prompt art70` runs one saved prompt; `--all` runs all eight. Outputs and model metadata go to gitignored `reproduced/<provider>/`. Different models and runs may produce different candidates. Compare them with the preserved raw outputs, verify every claim against the Act, and document corrections as in the [review log](intermediate/review.md). The builder does not automatically consume API output; curation into `ontology/reviewed-records.json` is a human review step.
 
-## 5. Render the note and diagram (optional)
+## 5. Render the technical note and diagram (optional)
 
-With Pandoc and LaTeX, render the submission note as a one-page PDF:
+With Pandoc and LaTeX, render the ontology technical note as a one-page PDF:
 
 ```bash
 pandoc docs/technical-note.md -o docs/technical-note.pdf --pdf-engine=pdflatex -V geometry:margin=0.5in -V fontsize=10pt
