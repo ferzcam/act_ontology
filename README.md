@@ -48,22 +48,20 @@ Run the saved competency queries directly:
 
 The [one-page technical note](docs/technical-note.md) gives the four questions, two shorter SPARQL examples, model scope and evaluation proposal. The [four source-to-query traces](docs/trace-examples.md) explain representative results and their legal qualifications.
 
-## 4. Re-run the local AI extraction (optional)
+## 4. Re-run AI candidate extraction (optional)
 
-The final ontology can be rebuilt without the model. To repeat the AI-assisted candidate extraction, have the local Pi provider `borg` and model `qwen3.8-27b` available. The bounded prompts are in `prompts/pi-qwen/`; the original raw responses are preserved in `intermediate/pi-qwen/`. Run all prompts into a gitignored comparison directory:
+**No API key or language model is needed to rebuild the ontology.** The tracked `ontology/reviewed-records.json` is its deterministic input. The original AI-assisted extraction used a **locally served Qwen3.8-27B model through Pi**; its prompts and raw outputs are preserved in `prompts/pi-qwen/` and `intermediate/pi-qwen/`.
+
+To generate new candidate outputs, use your own chat-completions model through OpenAI or OpenRouter. Obtain a key from the [official OpenAI API quickstart](https://developers.openai.com/api/docs/quickstart) or [OpenRouter quickstart](https://openrouter.ai/docs/quickstart), then set `OPENAI_API_KEY` or `OPENROUTER_API_KEY` in your environment. Choose a model ID supported by that provider; `YOUR_CHAT_MODEL` below is a placeholder. Never put a key in the repository.
 
 ```bash
-mkdir -p reproduced/pi-qwen
-for input in prompts/pi-qwen/*-prompt.txt; do
-  name="${input##*/}"
-  output="${name%-prompt.txt}-raw.txt"
-  pi --provider borg --model qwen3.8-27b --offline \
-    --no-extensions --no-skills --no-prompt-templates --no-themes \
-    --no-session --no-tools -p "@${input}" > "reproduced/pi-qwen/${output}"
-done
+.venv/bin/python scripts/extract_candidates.py --provider openai --model YOUR_CHAT_MODEL --prompt art70 --dry-run
+.venv/bin/python scripts/extract_candidates.py --provider openai --model YOUR_CHAT_MODEL --prompt art70
+# Or, with OPENROUTER_API_KEY set:
+.venv/bin/python scripts/extract_candidates.py --provider openrouter --model YOUR_CHAT_MODEL --all
 ```
 
-Model responses may differ between runs. Compare the new candidates with the preserved raw outputs and the exact source provisions. The [review log](intermediate/review.md) documents corrections; `ontology/reviewed-records.json` is the curated, version-controlled input used by the builder. Editing that file is a human review step, not an automatic conversion from model output.
+`--prompt art70` runs one saved prompt; `--all` runs all eight. Outputs and model metadata go to gitignored `reproduced/<provider>/`. Different models and runs may produce different candidates. Compare them with the preserved raw outputs, verify every claim against the Act, and document corrections as in the [review log](intermediate/review.md). The builder does not automatically consume API output; curation into `ontology/reviewed-records.json` is a human review step.
 
 ## 5. Render the note and diagram (optional)
 
