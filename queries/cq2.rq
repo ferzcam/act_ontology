@@ -3,8 +3,9 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX dct: <http://purl.org/dc/terms/>
-SELECT ?categoryLabel ?sourceRef ?ruleLabel WHERE {
+SELECT ?categoryLabel ?sourceRef ?ruleLabel ?qualification WHERE {
   ?category rdfs:subClassOf act:AnnexIIIListedAISystem ; rdfs:label ?categoryLabel ; act:sourceReference ?sourceRef .
   ?rule rdf:type act:ClassificationRule ; act:appliesToSystemCategory act:AnnexIIIListedAISystem ; rdfs:label ?ruleLabel ; prov:wasDerivedFrom ?provision .
   ?provision dct:identifier "Article 6(2)" .
+  ?rule act:hasException ?qualification .
 } ORDER BY ?sourceRef

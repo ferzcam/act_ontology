@@ -172,6 +172,7 @@ def validate(data: dict) -> dict:
     from java.io import File
     from org.semanticweb.elk.owlapi import ElkReasonerFactory
     from org.semanticweb.owlapi.apibinding import OWLManager
+    from org.semanticweb.owlapi.model import IRI
     from org.semanticweb.owlapi.profiles import OWL2ELProfile
 
     if not SOURCE_PDF.is_file():
@@ -189,6 +190,15 @@ def validate(data: dict) -> dict:
     try:
         consistent = bool(reasoner.isConsistent())
         unsatisfiable = sorted(str(x.getIRI()) for x in reasoner.getUnsatisfiableClasses().getEntitiesMinusBottom())
+        factory = manager.getOWLDataFactory()
+        def entailed_subclass(child: str, parent: str) -> bool:
+            child_class = factory.getOWLClass(IRI.create(iri(child)))
+            parent_class = factory.getOWLClass(IRI.create(iri(parent)))
+            return bool(reasoner.getSuperClasses(child_class, False).containsEntity(parent_class))
+        entailments = {
+            "annex_iii_is_ai_system": entailed_subclass("AnnexIIIListedAISystem", "AISystem"),
+            "annex_iii_is_automatically_high_risk": entailed_subclass("AnnexIIIListedAISystem", "HighRiskAISystem"),
+        }
     finally:
         reasoner.dispose()
 
@@ -199,16 +209,30 @@ def validate(data: dict) -> dict:
     query_ok = True
     for name, specification in expected.items():
         query = (QUERIES / f"{name}.rq").read_text()
-        rows = [tuple(str(value) if value is not None else "" for value in row) for row in graph.query(query)]
+        result = graph.query(query)
+        columns = [str(var) for var in result.vars]
+        rows = [tuple(str(value) if value is not None else "" for value in row) for row in result]
+        row_objects = [dict(zip(columns, row)) for row in rows]
         references = {cell for row in rows for cell in row if cell.startswith(("Article ", "Annex "))}
         missing = sorted(set(specification["required_references"]) - references)
-        passed = len(rows) >= specification["minimum_rows"] and not missing
+        missing_examples = [
+            fragment for fragment in specification.get("required_row_fragments", [])
+            if not any(all(text in row.get(column, "") for column, text in fragment.items()) for row in row_objects)
+        ]
+        passed = len(rows) >= specification["minimum_rows"] and not missing and not missing_examples
         query_ok &= passed
-        query_results[name] = {"rows": rows, "row_count": len(rows), "missing_required_references": missing, "passed": passed}
+        query_results[name] = {"columns": columns, "rows": rows, "row_count": len(rows), "missing_required_references": missing, "missing_required_examples": missing_examples, "passed": passed}
 
     extracted = subprocess.run(["pdftotext", "-layout", str(SOURCE_PDF), "-"], capture_output=True, text=True, check=True).stdout
-    source_text = normalized(extracted)
-    missed_evidence = [item["id"] for item in data["statements"] if normalized(item["evidence"]) not in source_text]
+    article_headings = list(re.finditer(r"(?m)^\s*Article\s+(\d+)\s*$", extracted))
+    article_passages = {
+        int(match.group(1)): normalized(extracted[match.start():article_headings[index + 1].start() if index + 1 < len(article_headings) else len(extracted)])
+        for index, match in enumerate(article_headings)
+    }
+    def evidence_in_cited_article(item: dict) -> bool:
+        citation = re.match(r"Article (\d+)", item["source_ref"])
+        return bool(citation) and normalized(item["evidence"]) in article_passages.get(int(citation.group(1)), "")
+    missed_evidence = [item["id"] for item in data["statements"] if not evidence_in_cited_article(item)]
     annotation_complete = all(item.get("label") and item.get("description") and item.get("source_ref") for item in data["statements"])
     statement_count = len(data["statements"])
     cited_refs = {item["source_ref"] for item in data["statements"]}
@@ -219,17 +243,18 @@ def validate(data: dict) -> dict:
         "profile_violations": violations,
         "consistent": consistent,
         "unsatisfiable_named_classes": unsatisfiable,
+        "classification_entailments": entailments,
         "triple_count": len(graph),
         "class_count": len(data["classes"]),
         "statement_count": statement_count,
         "cited_provision_count": len(cited_refs),
         "annotation_completeness": annotation_complete,
-        "evidence_matches": statement_count - len(missed_evidence),
-        "evidence_match_rate": (statement_count - len(missed_evidence)) / statement_count if statement_count else 0,
-        "missing_evidence": missed_evidence,
+        "evidence_matches_in_cited_article": statement_count - len(missed_evidence),
+        "evidence_match_rate_in_cited_article": (statement_count - len(missed_evidence)) / statement_count if statement_count else 0,
+        "evidence_missing_from_cited_article": missed_evidence,
         "queries": query_results,
     }
-    report["passed"] = bool(profile.isInProfile()) and consistent and not unsatisfiable and annotation_complete and not missed_evidence and query_ok
+    report["passed"] = bool(profile.isInProfile()) and consistent and not unsatisfiable and annotation_complete and not missed_evidence and query_ok and entailments["annex_iii_is_ai_system"] and not entailments["annex_iii_is_automatically_high_risk"]
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     return report
@@ -245,7 +270,7 @@ def main() -> None:
         print(json.dumps(build(data), indent=2))
     if args.action in ("validate", "all"):
         report = validate(data)
-        print(json.dumps({key: report[key] for key in ("passed", "owl2_el_profile", "consistent", "class_count", "statement_count", "cited_provision_count", "evidence_match_rate")}, indent=2))
+        print(json.dumps({key: report[key] for key in ("passed", "owl2_el_profile", "consistent", "class_count", "statement_count", "cited_provision_count", "evidence_match_rate_in_cited_article")}, indent=2))
         if not report["passed"]:
             raise SystemExit(1)
 

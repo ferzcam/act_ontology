@@ -176,80 +176,80 @@
       "source_ref": "Article 5"
     },
     {
-      "id": "ProhibitedPractice",
+      "id": "Article5ListedPractice",
       "parent": "AIPractice",
-      "label": "Prohibited AI practice",
-      "description": "Practice prohibited subject to the applicable Article 5 conditions and exceptions.",
+      "label": "Article 5-listed practice",
+      "description": "A practice described in Article 5(1); whether the prohibition applies depends on the cited statement, conditions and exceptions.",
       "source_ref": "Article 5(1)"
     },
     {
       "id": "ManipulativePractice",
-      "parent": "ProhibitedPractice",
+      "parent": "Article5ListedPractice",
       "label": "Manipulative or deceptive technique",
       "description": "Article 5(1) point (a) practice, subject to its stated scope and exceptions.",
       "source_ref": "Article 5(1)(a)"
     },
     {
       "id": "VulnerabilityExploitationPractice",
-      "parent": "ProhibitedPractice",
+      "parent": "Article5ListedPractice",
       "label": "Exploitation of vulnerabilities",
       "description": "Article 5(1) point (b) practice, subject to its stated scope and exceptions.",
       "source_ref": "Article 5(1)(b)"
     },
     {
       "id": "NonConsensualIntimateContentPractice",
-      "parent": "ProhibitedPractice",
+      "parent": "Article5ListedPractice",
       "label": "Non-consensual intimate or sexual content",
       "description": "Article 5(1) point (ba) practice, subject to its stated scope and exceptions.",
       "source_ref": "Article 5(1)(ba)"
     },
     {
       "id": "ChildSexualAbuseMaterialPractice",
-      "parent": "ProhibitedPractice",
+      "parent": "Article5ListedPractice",
       "label": "Child sexual abuse material or performance",
       "description": "Article 5(1) point (bb) practice, subject to its stated scope and exceptions.",
       "source_ref": "Article 5(1)(bb)"
     },
     {
       "id": "SocialScoringPractice",
-      "parent": "ProhibitedPractice",
+      "parent": "Article5ListedPractice",
       "label": "Social scoring",
       "description": "Article 5(1) point (c) practice, subject to its stated scope and exceptions.",
       "source_ref": "Article 5(1)(c)"
     },
     {
       "id": "SolelyProfilingCrimeRiskPractice",
-      "parent": "ProhibitedPractice",
+      "parent": "Article5ListedPractice",
       "label": "Crime risk assessment based solely on profiling",
       "description": "Article 5(1) point (d) practice, subject to its stated scope and exceptions.",
       "source_ref": "Article 5(1)(d)"
     },
     {
       "id": "UntargetedFacialScrapingPractice",
-      "parent": "ProhibitedPractice",
+      "parent": "Article5ListedPractice",
       "label": "Untargeted facial-image scraping",
       "description": "Article 5(1) point (e) practice, subject to its stated scope and exceptions.",
       "source_ref": "Article 5(1)(e)"
     },
     {
       "id": "WorkplaceEducationEmotionPractice",
-      "parent": "ProhibitedPractice",
+      "parent": "Article5ListedPractice",
       "label": "Workplace or education emotion inference",
       "description": "Article 5(1) point (f) practice, subject to its stated scope and exceptions.",
       "source_ref": "Article 5(1)(f)"
     },
     {
       "id": "SensitiveBiometricCategorisationPractice",
-      "parent": "ProhibitedPractice",
+      "parent": "Article5ListedPractice",
       "label": "Sensitive biometric categorisation",
       "description": "Article 5(1) point (g) practice, subject to its stated scope and exceptions.",
       "source_ref": "Article 5(1)(g)"
     },
     {
       "id": "RealTimeRemoteBiometricIdentificationPractice",
-      "parent": "ProhibitedPractice",
-      "label": "Real-time remote biometric identification for law enforcement",
-      "description": "Article 5(1) point (h) practice, subject to its stated scope and exceptions.",
+      "parent": "Article5ListedPractice",
+      "label": "Real-time remote biometric identification in public spaces for law enforcement",
+      "description": "Article 5(1)(h) practice of using real-time remote biometric identification in publicly accessible spaces for law enforcement, subject to stated objectives and safeguards.",
       "source_ref": "Article 5(1)(h)"
     },
     {
@@ -582,7 +582,7 @@
         "HighRiskAISystem"
       ],
       "practice_categories": [],
-      "condition": "to the extent such logs are under their control",
+      "condition": "Logs are under the deployer’s control; retention is for a period appropriate to the system’s intended purpose, of at least six months.",
       "exception": "unless provided otherwise in applicable Union or national law, in particular in Union law on the protection of personal data"
     },
     {
@@ -785,7 +785,7 @@
       ],
       "practice_categories": [],
       "condition": "Both safety-component/product coverage by Annex I legislation and required third-party conformity assessment.",
-      "exception": "Subject to Article 6(1a) and 6(1c) exclusions."
+      "exception": "Article 6(1a) excludes solely non-safety uses, Article 6(1b) restores safety-component status where failure would endanger health or safety, and Article 6(1c) excludes third-party assessment solely for non-health-and-safety risks."
     },
     {
       "id": "Rule_Article6_2",
@@ -800,7 +800,7 @@
       ],
       "practice_categories": [],
       "condition": "The system is in an Annex III listed use case.",
-      "exception": "Article 6(3) derogation may apply; profiling of natural persons remains high-risk."
+      "exception": "Article 6(3) derogation may apply to non-profiling systems; a provider invoking it must document the assessment and comply with Article 49(2) registration under Article 6(4)."
     },
     {
       "id": "Rule_Article6_3",
@@ -955,8 +955,8 @@
     {
       "id": "Prohibition_Article5_h",
       "type": "Prohibition",
-      "label": "Real-time remote biometric identification for law enforcement",
-      "description": "Real-time remote biometric identification for law enforcement",
+      "label": "Real-time remote biometric identification in public spaces for law enforcement",
+      "description": "Article 5(1)(h) prohibition on use in publicly accessible spaces for law enforcement, subject to strictly necessary objectives and further safeguards.",
       "source_ref": "Article 5(1)(h)",
       "evidence": "the use of ‘real-time’ remote biometric identification systems in publicly accessible spaces",
       "actor_roles": [],
@@ -964,8 +964,8 @@
       "practice_categories": [
         "RealTimeRemoteBiometricIdentificationPractice"
       ],
-      "condition": "For law-enforcement purposes.",
-      "exception": "Strict necessity for one of the Article 5(1)(h)(i)–(iii) objectives, plus Article 5(2)–(7) safeguards and authorisation."
+      "condition": "Use in publicly accessible spaces for law-enforcement purposes.",
+      "exception": "Use may be permitted only insofar as strictly necessary for an Article 5(1)(h)(i)–(iii) objective, with the Article 5(2)–(5) safeguards and authorisation rules, including national law and limited urgency provisions."
     },
     {
       "id": "Obligation_Article70_1",

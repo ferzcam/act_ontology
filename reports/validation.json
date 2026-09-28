@@ -5,120 +5,172 @@
   "profile_violations": [],
   "consistent": true,
   "unsatisfiable_named_classes": [],
+  "classification_entailments": {
+    "annex_iii_is_ai_system": true,
+    "annex_iii_is_automatically_high_risk": false
+  },
   "triple_count": 820,
   "class_count": 41,
   "statement_count": 42,
   "cited_provision_count": 41,
   "annotation_completeness": true,
-  "evidence_matches": 42,
-  "evidence_match_rate": 1.0,
-  "missing_evidence": [],
+  "evidence_matches_in_cited_article": 42,
+  "evidence_match_rate_in_cited_article": 1.0,
+  "evidence_missing_from_cited_article": [],
   "queries": {
     "cq1": {
+      "columns": [
+        "practiceLabel",
+        "statementLabel",
+        "sourceRef",
+        "condition",
+        "exception"
+      ],
       "rows": [
         [
           "Manipulative or deceptive technique",
           "Subliminal, manipulative or deceptive techniques materially distorting behaviour causing significant harm",
-          "Article 5(1)(a)"
+          "Article 5(1)(a)",
+          "Materially distorts behaviour and causes or is reasonably likely to cause significant harm.",
+          ""
         ],
         [
           "Exploitation of vulnerabilities",
           "Exploiting vulnerabilities of a person or group due to age, disability or social/economic situation",
-          "Article 5(1)(b)"
+          "Article 5(1)(b)",
+          "Materially distorts behaviour and causes or is reasonably likely to cause significant harm.",
+          ""
         ],
         [
           "Non-consensual intimate or sexual content",
           "Generation or manipulation of intimate or sexually explicit material of an identifiable person",
-          "Article 5(1)(ba)"
+          "Article 5(1)(ba)",
+          "Applies where done without that person's freely-given, specific, informed, unambiguous and explicit consent for that generation or manipulation. Article 5(1a) limits placement, service and use; Article 5(1b) limits manipulation.",
+          ""
         ],
         [
           "Child sexual abuse material or performance",
           "Generation or manipulation of material within the meaning of Article 2(c) and (e) of Directive 2011/93/EU",
-          "Article 5(1)(bb)"
+          "Article 5(1)(bb)",
+          "",
+          "Except where a 'without right' defence applies under national law. Article 5(1a) further limits placement, service and use."
         ],
         [
           "Social scoring",
           "Social scoring (evaluation/classification of persons or groups over time) leading to detrimental or unfavourable treatment",
-          "Article 5(1)(c)"
+          "Article 5(1)(c)",
+          "Applies where the social score leads to detrimental or unfavourable treatment in contexts unrelated to where the data was collected, or that is unjustified or disproportionate to the behaviour or its gravity.",
+          ""
         ],
         [
           "Crime risk assessment based solely on profiling",
           "Predictive risk assessment of a person committing a criminal offence based solely on profiling or personality traits",
-          "Article 5(1)(d)"
+          "Article 5(1)(d)",
+          "",
+          "Shall not apply to AI systems used to support the human assessment of a person's involvement in criminal activity already based on objective and verifiable facts directly linked to a criminal activity."
         ],
         [
           "Untargeted facial-image scraping",
           "Untargeted facial-image scraping",
-          "Article 5(1)(e)"
+          "Article 5(1)(e)",
+          "",
+          ""
         ],
         [
           "Workplace or education emotion inference",
           "Workplace or education emotion inference",
-          "Article 5(1)(f)"
+          "Article 5(1)(f)",
+          "",
+          "Medical or safety reasons."
         ],
         [
           "Sensitive biometric categorisation",
           "Sensitive biometric categorisation",
-          "Article 5(1)(g)"
+          "Article 5(1)(g)",
+          "",
+          "Lawfully acquired biometric dataset labelling/filtering and law-enforcement biometric categorisation are excluded."
         ],
         [
-          "Real-time remote biometric identification for law enforcement",
-          "Real-time remote biometric identification for law enforcement",
-          "Article 5(1)(h)"
+          "Real-time remote biometric identification in public spaces for law enforcement",
+          "Real-time remote biometric identification in public spaces for law enforcement",
+          "Article 5(1)(h)",
+          "Use in publicly accessible spaces for law-enforcement purposes.",
+          "Use may be permitted only insofar as strictly necessary for an Article 5(1)(h)(i)–(iii) objective, with the Article 5(2)–(5) safeguards and authorisation rules, including national law and limited urgency provisions."
         ]
       ],
       "row_count": 10,
       "missing_required_references": [],
+      "missing_required_examples": [],
       "passed": true
     },
     "cq2": {
+      "columns": [
+        "categoryLabel",
+        "sourceRef",
+        "ruleLabel",
+        "qualification"
+      ],
       "rows": [
         [
           "Annex III: Biometrics",
           "Annex III(1)",
-          "Annex III listed route to high-risk classification"
+          "Annex III listed route to high-risk classification",
+          "Article 6(3) derogation may apply to non-profiling systems; a provider invoking it must document the assessment and comply with Article 49(2) registration under Article 6(4)."
         ],
         [
           "Annex III: Critical infrastructure",
           "Annex III(2)",
-          "Annex III listed route to high-risk classification"
+          "Annex III listed route to high-risk classification",
+          "Article 6(3) derogation may apply to non-profiling systems; a provider invoking it must document the assessment and comply with Article 49(2) registration under Article 6(4)."
         ],
         [
           "Annex III: Education and vocational training",
           "Annex III(3)",
-          "Annex III listed route to high-risk classification"
+          "Annex III listed route to high-risk classification",
+          "Article 6(3) derogation may apply to non-profiling systems; a provider invoking it must document the assessment and comply with Article 49(2) registration under Article 6(4)."
         ],
         [
           "Annex III: Employment and workers management",
           "Annex III(4)",
-          "Annex III listed route to high-risk classification"
+          "Annex III listed route to high-risk classification",
+          "Article 6(3) derogation may apply to non-profiling systems; a provider invoking it must document the assessment and comply with Article 49(2) registration under Article 6(4)."
         ],
         [
           "Annex III: Essential private and public services",
           "Annex III(5)",
-          "Annex III listed route to high-risk classification"
+          "Annex III listed route to high-risk classification",
+          "Article 6(3) derogation may apply to non-profiling systems; a provider invoking it must document the assessment and comply with Article 49(2) registration under Article 6(4)."
         ],
         [
           "Annex III: Law enforcement",
           "Annex III(6)",
-          "Annex III listed route to high-risk classification"
+          "Annex III listed route to high-risk classification",
+          "Article 6(3) derogation may apply to non-profiling systems; a provider invoking it must document the assessment and comply with Article 49(2) registration under Article 6(4)."
         ],
         [
           "Annex III: Migration, asylum and border control",
           "Annex III(7)",
-          "Annex III listed route to high-risk classification"
+          "Annex III listed route to high-risk classification",
+          "Article 6(3) derogation may apply to non-profiling systems; a provider invoking it must document the assessment and comply with Article 49(2) registration under Article 6(4)."
         ],
         [
           "Annex III: Administration of justice and democratic processes",
           "Annex III(8)",
-          "Annex III listed route to high-risk classification"
+          "Annex III listed route to high-risk classification",
+          "Article 6(3) derogation may apply to non-profiling systems; a provider invoking it must document the assessment and comply with Article 49(2) registration under Article 6(4)."
         ]
       ],
       "row_count": 8,
       "missing_required_references": [],
+      "missing_required_examples": [],
       "passed": true
     },
     "cq3": {
+      "columns": [
+        "actorLabel",
+        "dutyLabel",
+        "sourceRef"
+      ],
       "rows": [
         [
           "Deployer",
@@ -218,9 +270,16 @@
       ],
       "row_count": 19,
       "missing_required_references": [],
+      "missing_required_examples": [],
       "passed": true
     },
     "cq4": {
+      "columns": [
+        "statementLabel",
+        "sourceRef",
+        "condition",
+        "exception"
+      ],
       "rows": [
         [
           "Indicate provider name, trade name/trademark, and contact address on the system or packaging/documentation",
@@ -279,7 +338,7 @@
         [
           "Keep automatically generated logs for at least six months, to the extent they are under the deployer's control.",
           "Article 26(6)",
-          "to the extent such logs are under their control",
+          "Logs are under the deployer’s control; retention is for a period appropriate to the system’s intended purpose, of at least six months.",
           "unless provided otherwise in applicable Union or national law, in particular in Union law on the protection of personal data"
         ],
         [
@@ -337,10 +396,10 @@
           "Lawfully acquired biometric dataset labelling/filtering and law-enforcement biometric categorisation are excluded."
         ],
         [
-          "Real-time remote biometric identification for law enforcement",
+          "Real-time remote biometric identification in public spaces for law enforcement",
           "Article 5(1)(h)",
-          "For law-enforcement purposes.",
-          "Strict necessity for one of the Article 5(1)(h)(i)–(iii) objectives, plus Article 5(2)–(7) safeguards and authorisation."
+          "Use in publicly accessible spaces for law-enforcement purposes.",
+          "Use may be permitted only insofar as strictly necessary for an Article 5(1)(h)(i)–(iii) objective, with the Article 5(2)–(5) safeguards and authorisation rules, including national law and limited urgency provisions."
         ],
         [
           "Inform natural persons they are interacting with an AI system, unless obvious to a reasonably well-informed, observant and circumspect person in the circumstances and context of use.",
@@ -400,13 +459,13 @@
           "Annex I product route to high-risk classification",
           "Article 6(1)",
           "Both safety-component/product coverage by Annex I legislation and required third-party conformity assessment.",
-          "Subject to Article 6(1a) and 6(1c) exclusions."
+          "Article 6(1a) excludes solely non-safety uses, Article 6(1b) restores safety-component status where failure would endanger health or safety, and Article 6(1c) excludes third-party assessment solely for non-health-and-safety risks."
         ],
         [
           "Annex III listed route to high-risk classification",
           "Article 6(2)",
           "The system is in an Annex III listed use case.",
-          "Article 6(3) derogation may apply; profiling of natural persons remains high-risk."
+          "Article 6(3) derogation may apply to non-profiling systems; a provider invoking it must document the assessment and comply with Article 49(2) registration under Article 6(4)."
         ],
         [
           "Annex III derogation from high-risk classification",
@@ -417,6 +476,7 @@
       ],
       "row_count": 32,
       "missing_required_references": [],
+      "missing_required_examples": [],
       "passed": true
     }
   },

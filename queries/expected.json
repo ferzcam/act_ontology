@@ -1,6 +1,60 @@
 {
-  "cq1": {"minimum_rows": 10, "required_references": ["Article 5(1)(a)", "Article 5(1)(h)"]},
-  "cq2": {"minimum_rows": 8, "required_references": ["Annex III(1)", "Annex III(8)"]},
-  "cq3": {"minimum_rows": 18, "required_references": ["Article 16(a)", "Article 26(1)"]},
-  "cq4": {"minimum_rows": 10, "required_references": ["Article 6(3)", "Article 50(1)"]}
+  "cq1": {
+    "minimum_rows": 10,
+    "required_references": [
+      "Article 5(1)(a)",
+      "Article 5(1)(h)"
+    ],
+    "required_row_fragments": [
+      {
+        "sourceRef": "Article 5(1)(h)",
+        "condition": "publicly accessible spaces",
+        "exception": "strictly necessary"
+      }
+    ]
+  },
+  "cq2": {
+    "minimum_rows": 8,
+    "required_references": [
+      "Annex III(1)",
+      "Annex III(8)"
+    ],
+    "required_row_fragments": [
+      {
+        "sourceRef": "Annex III(6)",
+        "qualification": "Article 6(3) derogation"
+      }
+    ]
+  },
+  "cq3": {
+    "minimum_rows": 18,
+    "required_references": [
+      "Article 16(a)",
+      "Article 26(1)"
+    ],
+    "required_row_fragments": [
+      {
+        "sourceRef": "Article 16(e)",
+        "actorLabel": "Provider"
+      },
+      {
+        "sourceRef": "Article 26(6)",
+        "actorLabel": "Deployer"
+      }
+    ]
+  },
+  "cq4": {
+    "minimum_rows": 10,
+    "required_references": [
+      "Article 6(3)",
+      "Article 50(1)"
+    ],
+    "required_row_fragments": [
+      {
+        "sourceRef": "Article 6(3)",
+        "condition": "No significant risk",
+        "exception": "profiling of natural persons"
+      }
+    ]
+  }
 }

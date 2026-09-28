@@ -168,6 +168,17 @@
 
 
 
+    <!-- https://github.com/ferzcam/act_ontology#Article5ListedPractice -->
+
+    <owl:Class rdf:about="https://github.com/ferzcam/act_ontology#Article5ListedPractice">
+        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#AIPractice"/>
+        <rdfs:comment>A practice described in Article 5(1); whether the prohibition applies depends on the cited statement, conditions and exceptions.</rdfs:comment>
+        <rdfs:label>Article 5-listed practice</rdfs:label>
+        <sourceReference>Article 5(1)</sourceReference>
+    </owl:Class>
+
+
+
     <!-- https://github.com/ferzcam/act_ontology#BiometricsListedAISystem -->
 
     <owl:Class rdf:about="https://github.com/ferzcam/act_ontology#BiometricsListedAISystem">
@@ -182,7 +193,7 @@
     <!-- https://github.com/ferzcam/act_ontology#ChildSexualAbuseMaterialPractice -->
 
     <owl:Class rdf:about="https://github.com/ferzcam/act_ontology#ChildSexualAbuseMaterialPractice">
-        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#ProhibitedPractice"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#Article5ListedPractice"/>
         <rdfs:comment>Article 5(1) point (bb) practice, subject to its stated scope and exceptions.</rdfs:comment>
         <rdfs:label>Child sexual abuse material or performance</rdfs:label>
         <sourceReference>Article 5(1)(bb)</sourceReference>
@@ -352,7 +363,7 @@
     <!-- https://github.com/ferzcam/act_ontology#ManipulativePractice -->
 
     <owl:Class rdf:about="https://github.com/ferzcam/act_ontology#ManipulativePractice">
-        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#ProhibitedPractice"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#Article5ListedPractice"/>
         <rdfs:comment>Article 5(1) point (a) practice, subject to its stated scope and exceptions.</rdfs:comment>
         <rdfs:label>Manipulative or deceptive technique</rdfs:label>
         <sourceReference>Article 5(1)(a)</sourceReference>
@@ -407,7 +418,7 @@
     <!-- https://github.com/ferzcam/act_ontology#NonConsensualIntimateContentPractice -->
 
     <owl:Class rdf:about="https://github.com/ferzcam/act_ontology#NonConsensualIntimateContentPractice">
-        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#ProhibitedPractice"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#Article5ListedPractice"/>
         <rdfs:comment>Article 5(1) point (ba) practice, subject to its stated scope and exceptions.</rdfs:comment>
         <rdfs:label>Non-consensual intimate or sexual content</rdfs:label>
         <sourceReference>Article 5(1)(ba)</sourceReference>
@@ -421,17 +432,6 @@
         <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#LegalStatement"/>
         <rdfs:comment>Obligation recorded as an individual with a source provision.</rdfs:comment>
         <rdfs:label>Obligation</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://github.com/ferzcam/act_ontology#ProhibitedPractice -->
-
-    <owl:Class rdf:about="https://github.com/ferzcam/act_ontology#ProhibitedPractice">
-        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#AIPractice"/>
-        <rdfs:comment>Practice prohibited subject to the applicable Article 5 conditions and exceptions.</rdfs:comment>
-        <rdfs:label>Prohibited AI practice</rdfs:label>
-        <sourceReference>Article 5(1)</sourceReference>
     </owl:Class>
 
 
@@ -460,9 +460,9 @@
     <!-- https://github.com/ferzcam/act_ontology#RealTimeRemoteBiometricIdentificationPractice -->
 
     <owl:Class rdf:about="https://github.com/ferzcam/act_ontology#RealTimeRemoteBiometricIdentificationPractice">
-        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#ProhibitedPractice"/>
-        <rdfs:comment>Article 5(1) point (h) practice, subject to its stated scope and exceptions.</rdfs:comment>
-        <rdfs:label>Real-time remote biometric identification for law enforcement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#Article5ListedPractice"/>
+        <rdfs:comment>Article 5(1)(h) practice of using real-time remote biometric identification in publicly accessible spaces for law enforcement, subject to stated objectives and safeguards.</rdfs:comment>
+        <rdfs:label>Real-time remote biometric identification in public spaces for law enforcement</rdfs:label>
         <sourceReference>Article 5(1)(h)</sourceReference>
     </owl:Class>
 
@@ -471,7 +471,7 @@
     <!-- https://github.com/ferzcam/act_ontology#SensitiveBiometricCategorisationPractice -->
 
     <owl:Class rdf:about="https://github.com/ferzcam/act_ontology#SensitiveBiometricCategorisationPractice">
-        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#ProhibitedPractice"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#Article5ListedPractice"/>
         <rdfs:comment>Article 5(1) point (g) practice, subject to its stated scope and exceptions.</rdfs:comment>
         <rdfs:label>Sensitive biometric categorisation</rdfs:label>
         <sourceReference>Article 5(1)(g)</sourceReference>
@@ -482,7 +482,7 @@
     <!-- https://github.com/ferzcam/act_ontology#SocialScoringPractice -->
 
     <owl:Class rdf:about="https://github.com/ferzcam/act_ontology#SocialScoringPractice">
-        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#ProhibitedPractice"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#Article5ListedPractice"/>
         <rdfs:comment>Article 5(1) point (c) practice, subject to its stated scope and exceptions.</rdfs:comment>
         <rdfs:label>Social scoring</rdfs:label>
         <sourceReference>Article 5(1)(c)</sourceReference>
@@ -493,7 +493,7 @@
     <!-- https://github.com/ferzcam/act_ontology#SolelyProfilingCrimeRiskPractice -->
 
     <owl:Class rdf:about="https://github.com/ferzcam/act_ontology#SolelyProfilingCrimeRiskPractice">
-        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#ProhibitedPractice"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#Article5ListedPractice"/>
         <rdfs:comment>Article 5(1) point (d) practice, subject to its stated scope and exceptions.</rdfs:comment>
         <rdfs:label>Crime risk assessment based solely on profiling</rdfs:label>
         <sourceReference>Article 5(1)(d)</sourceReference>
@@ -515,7 +515,7 @@
     <!-- https://github.com/ferzcam/act_ontology#UntargetedFacialScrapingPractice -->
 
     <owl:Class rdf:about="https://github.com/ferzcam/act_ontology#UntargetedFacialScrapingPractice">
-        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#ProhibitedPractice"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#Article5ListedPractice"/>
         <rdfs:comment>Article 5(1) point (e) practice, subject to its stated scope and exceptions.</rdfs:comment>
         <rdfs:label>Untargeted facial-image scraping</rdfs:label>
         <sourceReference>Article 5(1)(e)</sourceReference>
@@ -526,7 +526,7 @@
     <!-- https://github.com/ferzcam/act_ontology#VulnerabilityExploitationPractice -->
 
     <owl:Class rdf:about="https://github.com/ferzcam/act_ontology#VulnerabilityExploitationPractice">
-        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#ProhibitedPractice"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#Article5ListedPractice"/>
         <rdfs:comment>Article 5(1) point (b) practice, subject to its stated scope and exceptions.</rdfs:comment>
         <rdfs:label>Exploitation of vulnerabilities</rdfs:label>
         <sourceReference>Article 5(1)(b)</sourceReference>
@@ -537,7 +537,7 @@
     <!-- https://github.com/ferzcam/act_ontology#WorkplaceEducationEmotionPractice -->
 
     <owl:Class rdf:about="https://github.com/ferzcam/act_ontology#WorkplaceEducationEmotionPractice">
-        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#ProhibitedPractice"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/ferzcam/act_ontology#Article5ListedPractice"/>
         <rdfs:comment>Article 5(1) point (f) practice, subject to its stated scope and exceptions.</rdfs:comment>
         <rdfs:label>Workplace or education emotion inference</rdfs:label>
         <sourceReference>Article 5(1)(f)</sourceReference>
@@ -978,7 +978,7 @@
         <appliesToActorRole rdf:resource="https://github.com/ferzcam/act_ontology#Deployer"/>
         <appliesToSystemCategory rdf:resource="https://github.com/ferzcam/act_ontology#HighRiskAISystem"/>
         <evidenceExcerpt>keep the logs automatically generated by that high-risk AI system to the extent such logs are under their control</evidenceExcerpt>
-        <hasCondition>to the extent such logs are under their control</hasCondition>
+        <hasCondition>Logs are under the deployer’s control; retention is for a period appropriate to the system’s intended purpose, of at least six months.</hasCondition>
         <hasException>unless provided otherwise in applicable Union or national law, in particular in Union law on the protection of personal data</hasException>
     </owl:NamedIndividual>
 
@@ -1129,12 +1129,12 @@
     <owl:NamedIndividual rdf:about="https://github.com/ferzcam/act_ontology#Prohibition_Article5_h">
         <rdf:type rdf:resource="https://github.com/ferzcam/act_ontology#Prohibition"/>
         <prov:wasDerivedFrom rdf:resource="https://github.com/ferzcam/act_ontology#Provision_Article_5_1_h"/>
-        <rdfs:comment>Real-time remote biometric identification for law enforcement</rdfs:comment>
-        <rdfs:label>Real-time remote biometric identification for law enforcement</rdfs:label>
+        <rdfs:comment>Article 5(1)(h) prohibition on use in publicly accessible spaces for law enforcement, subject to strictly necessary objectives and further safeguards.</rdfs:comment>
+        <rdfs:label>Real-time remote biometric identification in public spaces for law enforcement</rdfs:label>
         <concernsPractice rdf:resource="https://github.com/ferzcam/act_ontology#RealTimeRemoteBiometricIdentificationPractice"/>
         <evidenceExcerpt>the use of ‘real-time’ remote biometric identification systems in publicly accessible spaces</evidenceExcerpt>
-        <hasCondition>For law-enforcement purposes.</hasCondition>
-        <hasException>Strict necessity for one of the Article 5(1)(h)(i)–(iii) objectives, plus Article 5(2)–(7) safeguards and authorisation.</hasException>
+        <hasCondition>Use in publicly accessible spaces for law-enforcement purposes.</hasCondition>
+        <hasException>Use may be permitted only insofar as strictly necessary for an Article 5(1)(h)(i)–(iii) objective, with the Article 5(2)–(5) safeguards and authorisation rules, including national law and limited urgency provisions.</hasException>
     </owl:NamedIndividual>
 
 
@@ -1641,7 +1641,7 @@
         <appliesToSystemCategory rdf:resource="https://github.com/ferzcam/act_ontology#AnnexIProductAISystem"/>
         <evidenceExcerpt>that AI system shall be considered to be high-risk where both of the following conditions are fulfilled</evidenceExcerpt>
         <hasCondition>Both safety-component/product coverage by Annex I legislation and required third-party conformity assessment.</hasCondition>
-        <hasException>Subject to Article 6(1a) and 6(1c) exclusions.</hasException>
+        <hasException>Article 6(1a) excludes solely non-safety uses, Article 6(1b) restores safety-component status where failure would endanger health or safety, and Article 6(1c) excludes third-party assessment solely for non-health-and-safety risks.</hasException>
     </owl:NamedIndividual>
 
 
@@ -1656,7 +1656,7 @@
         <appliesToSystemCategory rdf:resource="https://github.com/ferzcam/act_ontology#AnnexIIIListedAISystem"/>
         <evidenceExcerpt>AI systems referred to in Annex III shall be considered to be high-risk</evidenceExcerpt>
         <hasCondition>The system is in an Annex III listed use case.</hasCondition>
-        <hasException>Article 6(3) derogation may apply; profiling of natural persons remains high-risk.</hasException>
+        <hasException>Article 6(3) derogation may apply to non-profiling systems; a provider invoking it must document the assessment and comply with Article 49(2) registration under Article 6(4).</hasException>
     </owl:NamedIndividual>
 
 

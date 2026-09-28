@@ -9,4 +9,10 @@ The raw `pi`/Qwen responses in this directory are candidate extractions. The OWL
 - Annex III: retained the eight top-level areas, labelled as listed use-case areas so they are not mistaken for all systems in a sector.
 - Articles 50 and 53: retained selected/point-level duties and their prominent exceptions; checked against the consolidated passage. Article 70(1) was represented with `MemberState` as obligated actor, correcting the raw output's authority-role conflation.
 
-The automated evidence-match check confirms that each short excerpt occurs somewhere in the exact-hash PDF; expert review is still needed to assess every paraphrase and exception.
+The automated evidence-match check confirms that each short excerpt occurs within its cited Article in the exact-hash PDF; expert review is still needed to assess every paraphrase and exception.
+
+## Targeted source-to-query audit
+
+The [four traced examples](../docs/trace-examples.md) led to three corrections: Article 5 headings moved from an unconditional `ProhibitedPractice` hierarchy to `Article5ListedPractice`; Article 6(1b)/(4) qualifications were made explicit; and the Article 26(6) retention period and Article 5(1)(h) public-space scope were clarified. The validator now checks that ELK does not infer Annex III listing to be universally high-risk.
+
+Protégé 5.6.9 loaded the generated OWL file in a temporary virtual display. The bundled ELK 0.6.0 reasoner started and remained active; a cropped [screenshot](../docs/protege-showcase.png) records the separate `Article5ListedPractice`, `AnnexIIIListedAISystem`, and `HighRiskAISystem` branches. The equivalent automated checks remain the authoritative repeatable validation.
