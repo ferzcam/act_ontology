@@ -27,15 +27,17 @@ The `--no-deps` option avoids mOWL's unused machine-learning dependency stack fo
 mkdir -p data
 curl -fL -o data/eu-ai-act-consolidated-2026-07-27-en.pdf 'https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02024R1689-20260727'
 curl -fL -o data/eu-ai-act-original-2024-en.pdf 'https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32024R1689'
-sha256sum data/*.pdf
+sha256sum -c sources.sha256
 ```
 
-The downloaded files used for this build have SHA-256 hashes:
+The downloaded files used for this build have SHA-256 hashes (also in `sources.sha256`):
 
 ```text
 1ccd38d1c78482cf2053b70110115adcc5080700acc8bd7bead8cb3579143ccf  data/eu-ai-act-consolidated-2026-07-27-en.pdf
 bba630444b3278e881066774002a1d7824308934f49ccfa203e65be43692f55e  data/eu-ai-act-original-2024-en.pdf
 ```
+
+If `sha256sum -c` fails, stop before building. EUR-Lex may respond to command-line downloads with an HTTP 202 bot challenge and an empty file. Open the same two official links in a browser, save the PDFs under the exact filenames in `data/`, and repeat the hash check. The PDFs remain gitignored.
 
 The consolidated text is a dated documentation aid (CELEX `02024R1689-20260727`); the original Official Journal publication (CELEX `32024R1689`) is the authentic base act. The builder checks the exact consolidated PDF hash before validation.
 
@@ -49,7 +51,13 @@ The consolidated text is a dated documentation aid (CELEX `02024R1689-20260727`)
 .venv/bin/python scripts/query.py cq4
 ```
 
-`all` builds `ontology/act-ontology.owl` from `ontology/reviewed-records.json` using the mOWL OWLAPI wrapper, then reloads the saved file. It checks the OWL 2 EL profile, ELK consistency and unsatisfiable classes, source hashes and evidence spans within their cited Articles, and all four RDFLib SPARQL queries against `queries/expected.json`. The full machine-readable result is `reports/validation.json`; a failed check makes the command exit nonzero. Use `build` or `validate` in place of `all` to run either stage alone. The `.owl` and validation report are tracked as reviewable outputs. The [four source-to-query traces](docs/trace-examples.md) show a targeted legal audit. The [technical note](docs/technical-note.md) explains the competency questions, scope, modelling choices and limitations.
+`all` builds `ontology/act-ontology.owl` from `ontology/reviewed-records.json` using the mOWL OWLAPI wrapper, then reloads the saved file. It checks the OWL 2 EL profile, ELK consistency and unsatisfiable classes, source hashes and evidence spans within their cited Articles, and all four RDFLib SPARQL queries against `queries/expected.json`. The full machine-readable result is `reports/validation.json`; a failed check makes the command exit nonzero. Use `build` or `validate` in place of `all` to run either stage alone. The `.owl` and validation report are tracked as reviewable outputs. The [four source-to-query traces](docs/trace-examples.md) show a targeted legal audit. The [technical note](docs/technical-note.md) explains the competency questions, scope, modelling choices and limitations. To render the submission note as a one-page PDF (optional, requires Pandoc and LaTeX):
+
+```bash
+pandoc docs/technical-note.md -o docs/technical-note.pdf --pdf-engine=pdflatex -V geometry:margin=0.5in -V fontsize=10pt
+```
+
+The generated PDF is gitignored; the Markdown note is the tracked source.
 
 ## Showcase in Protégé
 
