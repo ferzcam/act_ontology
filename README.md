@@ -4,6 +4,13 @@ A proof-of-concept OWL 2 EL ontology of EU AI Act categories, actors and cited l
 
 The validated version is on `main`. The `approach/record-and-query` branch preserves its development history for comparison with possible future approaches.
 
+## Four deliverables
+
+1. **Ontology:** [`ontology/act-ontology.owl`](ontology/act-ontology.owl) models AI system categories, Article 5 practices, high-risk classification routes, actors and selected obligations, with labels, descriptions and provision links.
+2. **AI-assisted workflow:** [prompts](prompts/pi-qwen/), [raw local Qwen outputs](intermediate/pi-qwen/), [review decisions](intermediate/review.md), [reviewed records](ontology/reviewed-records.json) and [scripts](scripts/) document how candidates became the checked ontology.
+3. **Short documentation:** the [one-page technical note](docs/technical-note.md) explains scope, modelling decisions, four competency questions, example SPARQL and an evaluation proposal; the [full queries](queries/) are runnable.
+4. **Validation:** the [machine-readable report](reports/validation.json) records OWL 2 EL profile, ELK consistency, evidence and query checks; the [Protégé walkthrough](docs/protege-showcase.md) shows the ontology in the GUI.
+
 ## 1. Clone and prepare the environment
 
 ```bash
